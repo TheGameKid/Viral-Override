@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dooms Shield (Bulwark Shield)
+* source:	https://sketchfab.com/3d-models/dooms-shield-bulwark-shield-1b4e6e0b8bd24c5483e2f03194478ffa
+* author:	EZEKIEL (https://sketchfab.com/Sebastian_Shaw)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dooms Shield (Bulwark Shield)" (https://sketchfab.com/3d-models/dooms-shield-bulwark-shield-1b4e6e0b8bd24c5483e2f03194478ffa) by EZEKIEL (https://sketchfab.com/Sebastian_Shaw) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
