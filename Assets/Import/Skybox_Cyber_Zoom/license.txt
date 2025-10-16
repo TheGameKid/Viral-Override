@@ -1,0 +1,11 @@
+Model Information:
+* title:	Skybox Cyber Zoom
+* source:	https://sketchfab.com/3d-models/skybox-cyber-zoom-f0c47e1c007747a08fa654bc7793d820
+* author:	skybox3dArchitect (https://sketchfab.com/skybox3dArchitect)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Skybox Cyber Zoom" (https://sketchfab.com/3d-models/skybox-cyber-zoom-f0c47e1c007747a08fa654bc7793d820) by skybox3dArchitect (https://sketchfab.com/skybox3dArchitect) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Skybox
+* source:	https://sketchfab.com/3d-models/skybox-01d17c8ae0024dd5bda4cca84fe95ffa
+* author:	raysu719 (https://sketchfab.com/raysu719)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Skybox" (https://sketchfab.com/3d-models/skybox-01d17c8ae0024dd5bda4cca84fe95ffa) by raysu719 (https://sketchfab.com/raysu719) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
