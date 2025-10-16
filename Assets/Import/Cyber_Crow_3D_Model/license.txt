@@ -1,0 +1,8 @@
+Model Information:
+* title:	Cyber Crow 3D Model
+* source:	https://sketchfab.com/3d-models/cyber-crow-3d-model-4b18b2328a174d1ab3a4408f80f9f673
+* author:	Gothic_404 (https://sketchfab.com/gothic404)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
