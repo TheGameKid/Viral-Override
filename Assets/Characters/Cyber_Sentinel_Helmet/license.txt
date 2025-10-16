@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cyber Sentinel Helmet
+* source:	https://sketchfab.com/3d-models/cyber-sentinel-helmet-234fc3d1731a4215ab691a709e1943f7
+* author:	3dUVpro (https://sketchfab.com/3dUVpro)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cyber Sentinel Helmet" (https://sketchfab.com/3d-models/cyber-sentinel-helmet-234fc3d1731a4215ab691a709e1943f7) by 3dUVpro (https://sketchfab.com/3dUVpro) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
