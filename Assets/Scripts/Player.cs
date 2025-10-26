@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     bool RotateLeft = false, RotateRight = false;
     float VZ = 0f, VX = 0f;
     public float rotX, rotY;
+    public GameObject bullet;
+    public GameObject ShotSpawn;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,7 +20,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
 
     private void FixedUpdate()
@@ -30,6 +32,10 @@ public class Player : MonoBehaviour
     {
         var kb = Keyboard.current;
         var gp = Gamepad.current;
+        var mouse = Mouse.current;
+
+        Vector2 mouseDelta = mouse.delta.ReadValue();
+
         if (kb == null && gp == null) return;
 
         if (kb.upArrowKey.isPressed || gp.leftStick.up.isPressed) VZ = 0.1f;
@@ -39,26 +45,31 @@ public class Player : MonoBehaviour
         if (kb.rightArrowKey.isPressed || gp.leftStick.right.isPressed) VX = -0.1f;
 
 
-        if (gp.rightStick.up.isPressed && transform.rotation.x > -45f)
+        if ((gp.rightStick.up.isPressed || mouseDelta.y > 0) && transform.rotation.x > -45f)
         {
             rotX -= 0.1f;
             transform.Rotate(rotX * 10.0f, 0, 0);
         }
-        if (gp.rightStick.down.isPressed && transform.rotation.x < 30f)
+        if ((gp.rightStick.down.isPressed || mouseDelta.y < 0) && transform.rotation.x < 30f)
         {
             rotX += 0.1f;
             transform.Rotate(rotX * 10.0f, 0, 0);
         }
-        if (gp.rightStick.left.isPressed)
+        if ((gp.rightStick.left.isPressed || mouseDelta.x < 0))
         {
             rotY -= 0.1f;
             transform.Rotate(0, rotY * 20.0f, 0);
 
         }
-        if (gp.rightStick.right.isPressed)
+        if (gp.rightStick.right.isPressed || mouseDelta.x > 0)
         {
             rotY += 0.1f;
             transform.Rotate(0, rotY * 20.0f, 0);
+        }
+
+        if (gp.rightShoulder.wasPressedThisFrame || mouse.leftButton.wasPressedThisFrame)
+        {
+            Instantiate(bullet, ShotSpawn.transform.position, transform.rotation);
         }
 
 
