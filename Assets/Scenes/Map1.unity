@@ -127,6 +127,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179021755}
     m_Modifications:
+    - target: {fileID: 156100754464616190, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 667170784411795224, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997974468135833933, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2152640291249019706, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -175,9 +187,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484125674741192396, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483265786159913697, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380238799597490747, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk_neon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787745977702691505, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1679,7 +1711,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &157925189
 MeshCollider:
@@ -2156,9 +2188,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -2191,8 +2223,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 00cc4c3e000000bf3333024200000000000000000000803f000080bf0000000000000000000080bfd04c0842000000009c190942000000bf3333024200000000000000000000803f000080bf0000000000000000000080bf00000000000000000000003e0000003f3333024200000000000000000000803f000080bf0000000000000000000080bf9c9908420000803fd0cc08420000003f3333024200000000000000000000803f000080bf0000000000000000000080bf0098993d0000803f9c190942000000bf3333024278487f3fe329993d0000000000000000000000000000803f000080bf66662342000c38bb9c190942000000bfcccc04c178487f3fe329993d0000000000000000000000000000803f000080bf00000000000c38bbd0cc08420000003f3333024278487f3fe329993d0000000000000000000000000000803f000080bf666623420000803fd0cc08420000003fcccc04c178487f3fe329993d0000000000000000000000000000803f000080bf000000000000803f9c190942000000bfcccc04c10000000000000000000080bf0000803f0000000000000000000080bf9c9908420000000000cc4c3e000000bfcccc04c10000000000000000000080bf0000803f0000000000000000000080bf0098993d00000000d0cc08420000003fcccc04c10000000000000000000080bf0000803f0000000000000000000080bfd04c08420000803f0000003e0000003fcccc04c10000000000000000000080bf0000803f0000000000000000000080bf000000000000803f00cc4c3e000000bfcccc04c178487fbfe32999bd000000000000000000000000000080bf000080bf66662342000b38bb00cc4c3e000000bf3333024278487fbfe32999bd000000000000000000000000000080bf000080bf00000000000b38bb0000003e0000003fcccc04c178487fbfe32999bd000000000000000000000000000080bf000080bf666623420000803f0000003e0000003f3333024278487fbfe32999bd000000000000000000000000000080bf000080bf000000000000803f0000003e0000003f33330242000000000000803f000000000000803f0000000000000000000080bf000000000000803fd0cc08420000003f33330242000000000000803f000000000000803f0000000000000000000080bfd04c08420000803f0000003e0000003fcccc04c1000000000000803f000000000000803f0000000000000000000080bf0000000066661fc2d0cc08420000003fcccc04c1000000000000803f000000000000803f0000000000000000000080bfd04c084266661fc200cc4c3e000000bfcccc04c100000000000080bf00000000000080bf0000000000000000000080bfd04c084266661fc29c190942000000bfcccc04c100000000000080bf00000000000080bf0000000000000000000080bf0000000066661fc200cc4c3e000000bf3333024200000000000080bf00000000000080bf0000000000000000000080bfd04c08420000803f9c190942000000bf3333024200000000000080bf00000000000080bf0000000000000000000080bf000000000000803f
+    m_DataSize: 1344
+    _typelessdata: 00cc4c3e000000bf3333024200000000000000000000803f000080bf0000000000000000000080bfd04c084200000000eb4b0e3f0bd7a33c9c190942000000bf3333024200000000000000000000803f000080bf0000000000000000000080bf0000000000000000e83f7c3f0bd7a33c0000003e0000003f3333024200000000000000000000803f000080bf0000000000000000000080bf9c9908420000803ff80d0e3f798c053dd0cc08420000003f3333024200000000000000000000803f000080bf0000000000000000000080bf0098993d0000803ff5017c3f798c053d9c190942000000bf3333024278487f3fe329993d0000000000000000000000000000803f000080bf66662342000c38bb52d7a33c0bd7a33c9c190942000000bfcccc04c178487f3fe329993d0000000000000000000000000000803f000080bf00000000000c38bb40ef083f0bd7a33cd0cc08420000003f3333024278487f3fe329993d0000000000000000000000000000803f000080bf666623420000803f0bd7a33c97b1053dd0cc08420000003fcccc04c178487f3fe329993d0000000000000000000000000000803f000080bf000000000000803f3eef083f97b1053d9c190942000000bfcccc04c10000000000000000000080bf0000803f0000000000000000000080bf9c99084200000000f80d0e3f1e9d573d00cc4c3e000000bfcccc04c10000000000000000000080bf0000803f0000000000000000000080bf0098993d00000000f4017c3f1d9d573dd0cc08420000003fcccc04c10000000000000000000080bf0000803f0000000000000000000080bfd04c08420000803fec4b0e3f099f853d0000003e0000003fcccc04c10000000000000000000080bf0000803f0000000000000000000080bf000000000000803fe83f7c3f089f853d00cc4c3e000000bfcccc04c178487fbfe32999bd000000000000000000000000000080bf000080bf66662342000b38bb52d7a33c1d9d573d00cc4c3e000000bf3333024278487fbfe32999bd000000000000000000000000000080bf000080bf00000000000b38bb40ef083f1d9d573d0000003e0000003fcccc04c178487fbfe32999bd000000000000000000000000000080bf000080bf666623420000803f0bd7a33c97b1853d0000003e0000003f3333024278487fbfe32999bd000000000000000000000000000080bf000080bf000000000000803f3eef083f97b1853d0000003e0000003f33330242000000000000803f000000000000803f0000000000000000000080bf000000000000803f3fef083fa1e7083fd0cc08420000003f33330242000000000000803f000000000000803f0000000000000000000080bfd04c08420000803f3fef083f9ddb763f0000003e0000003fcccc04c1000000000000803f000000000000803f0000000000000000000080bf0000000066661fc20bd7a33ca0e7083fd0cc08420000003fcccc04c1000000000000803f000000000000803f0000000000000000000080bfd04c084266661fc20bd7a33c9ddb763f00cc4c3e000000bfcccc04c100000000000080bf00000000000080bf0000000000000000000080bfd04c084266661fc23fef083f5aa7ae3d9c190942000000bfcccc04c100000000000080bf00000000000080bf0000000000000000000080bf0000000066661fc23fef083fe8c8033f00cc4c3e000000bf3333024200000000000080bf00000000000080bf0000000000000000000080bfd04c08420000803f0bd7a33c5ba7ae3d9c190942000000bf3333024200000000000080bf00000000000080bf0000000000000000000080bf000000000000803f1ad7a33ce8c8033f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2253,7 +2285,7 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
+  'm_MeshMetrics[1]': 6294.1533
   m_MeshOptimizationFlags: 1
   m_StreamData:
     serializedVersion: 2
@@ -2690,9 +2722,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -2725,8 +2757,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 00cc4c3e000000bf3333024200000000000000000000803f000080bf0000000000000000000080bfd04c0842000000009c190942000000bf3333024200000000000000000000803f000080bf0000000000000000000080bf00000000000000000000003e0000003f3333024200000000000000000000803f000080bf0000000000000000000080bf9c9908420000803fd0cc08420000003f3333024200000000000000000000803f000080bf0000000000000000000080bf0098993d0000803f9c190942000000bf3333024278487f3fe329993d0000000000000000000000000000803f000080bf66662342000c38bb9c190942000000bfcccc04c178487f3fe329993d0000000000000000000000000000803f000080bf00000000000c38bbd0cc08420000003f3333024278487f3fe329993d0000000000000000000000000000803f000080bf666623420000803fd0cc08420000003fcccc04c178487f3fe329993d0000000000000000000000000000803f000080bf000000000000803f9c190942000000bfcccc04c10000000000000000000080bf0000803f0000000000000000000080bf9c9908420000000000cc4c3e000000bfcccc04c10000000000000000000080bf0000803f0000000000000000000080bf0098993d00000000d0cc08420000003fcccc04c10000000000000000000080bf0000803f0000000000000000000080bfd04c08420000803f0000003e0000003fcccc04c10000000000000000000080bf0000803f0000000000000000000080bf000000000000803f00cc4c3e000000bfcccc04c178487fbfe32999bd000000000000000000000000000080bf000080bf66662342000b38bb00cc4c3e000000bf3333024278487fbfe32999bd000000000000000000000000000080bf000080bf00000000000b38bb0000003e0000003fcccc04c178487fbfe32999bd000000000000000000000000000080bf000080bf666623420000803f0000003e0000003f3333024278487fbfe32999bd000000000000000000000000000080bf000080bf000000000000803f0000003e0000003f33330242000000000000803f000000000000803f0000000000000000000080bf000000000000803fd0cc08420000003f33330242000000000000803f000000000000803f0000000000000000000080bfd04c08420000803f0000003e0000003fcccc04c1000000000000803f000000000000803f0000000000000000000080bf0000000066661fc2d0cc08420000003fcccc04c1000000000000803f000000000000803f0000000000000000000080bfd04c084266661fc200cc4c3e000000bfcccc04c100000000000080bf00000000000080bf0000000000000000000080bfd04c084266661fc29c190942000000bfcccc04c100000000000080bf00000000000080bf0000000000000000000080bf0000000066661fc200cc4c3e000000bf3333024200000000000080bf00000000000080bf0000000000000000000080bfd04c08420000803f9c190942000000bf3333024200000000000080bf00000000000080bf0000000000000000000080bf000000000000803f
+    m_DataSize: 1344
+    _typelessdata: 00cc4c3e000000bf3333024200000000000000000000803f000080bf0000000000000000000080bfd04c084200000000eb4b0e3f0bd7a33c9c190942000000bf3333024200000000000000000000803f000080bf0000000000000000000080bf0000000000000000e83f7c3f0bd7a33c0000003e0000003f3333024200000000000000000000803f000080bf0000000000000000000080bf9c9908420000803ff80d0e3f798c053dd0cc08420000003f3333024200000000000000000000803f000080bf0000000000000000000080bf0098993d0000803ff5017c3f798c053d9c190942000000bf3333024278487f3fe329993d0000000000000000000000000000803f000080bf66662342000c38bb52d7a33c0bd7a33c9c190942000000bfcccc04c178487f3fe329993d0000000000000000000000000000803f000080bf00000000000c38bb40ef083f0bd7a33cd0cc08420000003f3333024278487f3fe329993d0000000000000000000000000000803f000080bf666623420000803f0bd7a33c97b1053dd0cc08420000003fcccc04c178487f3fe329993d0000000000000000000000000000803f000080bf000000000000803f3eef083f97b1053d9c190942000000bfcccc04c10000000000000000000080bf0000803f0000000000000000000080bf9c99084200000000f80d0e3f1e9d573d00cc4c3e000000bfcccc04c10000000000000000000080bf0000803f0000000000000000000080bf0098993d00000000f4017c3f1d9d573dd0cc08420000003fcccc04c10000000000000000000080bf0000803f0000000000000000000080bfd04c08420000803fec4b0e3f099f853d0000003e0000003fcccc04c10000000000000000000080bf0000803f0000000000000000000080bf000000000000803fe83f7c3f089f853d00cc4c3e000000bfcccc04c178487fbfe32999bd000000000000000000000000000080bf000080bf66662342000b38bb52d7a33c1d9d573d00cc4c3e000000bf3333024278487fbfe32999bd000000000000000000000000000080bf000080bf00000000000b38bb40ef083f1d9d573d0000003e0000003fcccc04c178487fbfe32999bd000000000000000000000000000080bf000080bf666623420000803f0bd7a33c97b1853d0000003e0000003f3333024278487fbfe32999bd000000000000000000000000000080bf000080bf000000000000803f3eef083f97b1853d0000003e0000003f33330242000000000000803f000000000000803f0000000000000000000080bf000000000000803f3fef083fa1e7083fd0cc08420000003f33330242000000000000803f000000000000803f0000000000000000000080bfd04c08420000803f3fef083f9ddb763f0000003e0000003fcccc04c1000000000000803f000000000000803f0000000000000000000080bf0000000066661fc20bd7a33ca0e7083fd0cc08420000003fcccc04c1000000000000803f000000000000803f0000000000000000000080bfd04c084266661fc20bd7a33c9ddb763f00cc4c3e000000bfcccc04c100000000000080bf00000000000080bf0000000000000000000080bfd04c084266661fc23fef083f5aa7ae3d9c190942000000bfcccc04c100000000000080bf00000000000080bf0000000000000000000080bf0000000066661fc23fef083fe8c8033f00cc4c3e000000bf3333024200000000000080bf00000000000080bf0000000000000000000080bfd04c08420000803f0bd7a33c5ba7ae3d9c190942000000bf3333024200000000000080bf00000000000080bf0000000000000000000080bf000000000000803f1ad7a33ce8c8033f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2787,7 +2819,7 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
+  'm_MeshMetrics[1]': 6294.1533
   m_MeshOptimizationFlags: 1
   m_StreamData:
     serializedVersion: 2
@@ -3974,6 +4006,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 631105245}
     m_Modifications:
+    - target: {fileID: 156100754464616190, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 667170784411795224, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997974468135833933, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2152640291249019706, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.799988
@@ -4014,9 +4058,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484125674741192396, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483265786159913697, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380238799597490747, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk_neon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787745977702691505, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8391,6 +8455,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 720365913}
     m_Modifications:
+    - target: {fileID: 156100754464616190, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 667170784411795224, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997974468135833933, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2152640291249019706, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -8439,9 +8515,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484125674741192396, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483265786159913697, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380238799597490747, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk_neon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787745977702691505, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10960,6 +11056,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 720365913}
     m_Modifications:
+    - target: {fileID: 156100754464616190, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 667170784411795224, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997974468135833933, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2152640291249019706, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.799988
@@ -11000,9 +11108,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484125674741192396, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483265786159913697, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380238799597490747, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk_neon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787745977702691505, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12241,6 +12369,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 947498614}
     m_Modifications:
+    - target: {fileID: 156100754464616190, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 667170784411795224, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997974468135833933, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2152640291249019706, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -12289,9 +12429,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484125674741192396, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483265786159913697, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380238799597490747, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk_neon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787745977702691505, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12361,7 +12521,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1333174011
 Transform:
@@ -12705,6 +12865,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 631105245}
     m_Modifications:
+    - target: {fileID: 156100754464616190, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 667170784411795224, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997974468135833933, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2152640291249019706, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -12753,9 +12925,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484125674741192396, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483265786159913697, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380238799597490747, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk_neon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787745977702691505, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12983,6 +13175,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 947498614}
     m_Modifications:
+    - target: {fileID: 156100754464616190, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 667170784411795224, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997974468135833933, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2152640291249019706, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.799988
@@ -13023,9 +13227,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484125674741192396, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483265786159913697, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380238799597490747, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk_neon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787745977702691505, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13105,6 +13329,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1179021755}
     m_Modifications:
+    - target: {fileID: 156100754464616190, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 667170784411795224, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997974468135833933, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2152640291249019706, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.799988
@@ -13145,9 +13381,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484125674741192396, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483265786159913697, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380238799597490747, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk_neon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8542721644367733393, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787745977702691505, guid: 41cf4a1011f5aab4084edda3368b61dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13830,6 +14086,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 260247107315091304, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1378993892202544491, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.2107897
@@ -13850,9 +14110,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 24.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2027980048674252903, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225005663566371899, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2642584264256771159, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
       propertyPath: m_Name
       value: city_cyberpunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642584264256771159, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756390717682019020, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490827454169114785, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3786961958734523126, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
       propertyPath: m_LocalScale.y
@@ -13901,11 +14181,19 @@ PrefabInstance:
     - target: {fileID: 6704682173342657364, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2921a7d691a96864085140a3c4ec13fb, type: 2}
+      objectReference: {fileID: 2100000, guid: b8ec9440f06384746a94b6d5afa3230e, type: 2}
     - target: {fileID: 7253957392526562642, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2921a7d691a96864085140a3c4ec13fb, type: 2}
+    - target: {fileID: 7753760307204109103, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8636216511411586005, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8839658017457155244, guid: e2cd8c42770c23c409a10ca96151b123, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
