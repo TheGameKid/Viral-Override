@@ -1,64 +1,31 @@
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using System.Collections;
 
 public class Player : MonoBehaviour
 {
+<<<<<<< Updated upstream
+    bool MoveLeft = false, MoveRight = false, MoveForward = false, MoveBackward = false;
+    bool RotateLeft = false, RotateRight = false;
+=======
     // *** NEW: Add CharacterController reference ***
     private CharacterController characterController;
 
     // Add a movement speed variable for better control
     public float movementSpeed = 5.0f; // Adjust this value in the Inspector
 
+>>>>>>> Stashed changes
     float VZ = 0f, VX = 0f;
     public float rotX, rotY;
     public GameObject bullet;
     public GameObject ShotSpawn;
-    public GameObject HUD;
-    public GameObject Firewall;
-    public GameObject Firewall2;
-    public GameObject FirewallEffect;
-    public GameObject Encryptor;
-    public GameObject Decoder;
-    public TextMeshProUGUI FireWallCooldownText;
-    public TextMeshProUGUI EncryptorCooldownText;
-    public TextMeshProUGUI DecoderCooldownText;
-    public TextMeshProUGUI HPText;
-    public TextMeshProUGUI AmmoCountText;
-    public Image HealthBarFill;
-    public Image HealthBarForeground;
-    public Image AmmoFill;
-    public Image AmmoForeground;
-    public Image FireWallBox;
-    public Image EncryptorBox;
-    public Image DecoderBox;
-    public GameObject Fire;
-    public int FireWallCooldownTimer;
-    public int EncryptorCooldownTimer;
-    public int DecoderCooldownTimer;
-    public float FireWallTimer;
-    public float EncryptorTimer;
-    public float DecoderTimer;
-    public float timer1;
-    public float timer2;
-    public float timer3;
-    public int health;
-    public int maxHealth;
-    public int ammo;
-    public int maxAmmo;
-    public bool FireWallUp;
-    public bool EncryptorUp;
-    public bool DecoderUp;
-    public Color specialBlue = new Color(7, 157, 242, 255);
-    public Game game;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    void Start()
     {
+<<<<<<< Updated upstream
+
+=======
         // *** NEW: Get the CharacterController component ***
         characterController = GetComponent<CharacterController>();
         if (characterController == null)
@@ -82,11 +49,15 @@ public class Player : MonoBehaviour
         FireWallBox.color = Color.red;
         DecoderBox.color = Color.green;
         EncryptorBox.color = specialBlue;
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
+
+=======
         UpdateHealth((float)health / (float)maxHealth);
         UpdateAmmo((float)ammo / (float)maxAmmo);
 
@@ -132,70 +103,31 @@ public class Player : MonoBehaviour
 
         }
 
+>>>>>>> Stashed changes
     }
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-    }
-
-    public void TakeAmmo(int ammo)
-    {
-        this.ammo -= ammo;
-    }
-
-    public void UpdateHealth(float fraction)
-    {
-        HealthBarFill.fillAmount = fraction;
-
-        if (health >= 75)
-        {
-            HealthBarFill.color = Color.green;
-            HPText.color = Color.white;
-        }
-        else if (health >= 50)
-        {
-            HealthBarFill.color = Color.yellow;
-            HPText.color = Color.yellow;
-        }
-        else if (health >= 25)
-        {
-            HealthBarFill.color = Color.orange;
-            HPText.color = Color.orange;
-        }
-        else
-        {
-            HealthBarFill.color = Color.red;
-            HPText.color = Color.red;
-        }
-
-        HPText.text = "HP: " + health + "/" + maxHealth;
-    }
-
-    public void UpdateAmmo(float fraction)
-    {
-        AmmoFill.fillAmount = fraction;
-        AmmoCountText.text = "AMMO: " + ammo + "/" + maxAmmo;
-    }
-
 
     private void FixedUpdate()
     {
-        if (health > 0)
-        {
-            CubeTranslation();
-        }
+        CubeTranslation();
     }
 
     public void CubeTranslation()
     {
         var kb = Keyboard.current;
+        var gp = Gamepad.current;
         var mouse = Mouse.current;
 
         Vector2 mouseDelta = mouse.delta.ReadValue();
 
-        if (kb == null) return;
+        if (kb == null && gp == null) return;
 
+<<<<<<< Updated upstream
+        if (kb.upArrowKey.isPressed || gp.leftStick.up.isPressed) VZ = 0.1f;
+        if (kb.downArrowKey.isPressed || gp.leftStick.down.isPressed) VZ = -0.1f;
+
+        if (kb.leftArrowKey.isPressed || gp.leftStick.left.isPressed) VX = 0.1f;
+        if (kb.rightArrowKey.isPressed || gp.leftStick.right.isPressed) VX = -0.1f;
+=======
         // Reset velocity variables at the start of the frame
         float VZ_temp = 0f;
         float VX_temp = 0f;
@@ -279,65 +211,43 @@ public class Player : MonoBehaviour
         // Keyboard Input (Updated to use VZ_temp/VX_temp)
         if (kb.upArrowKey.isPressed) VZ_temp = 1f;
         if (kb.downArrowKey.isPressed) VZ_temp = -1f;
+>>>>>>> Stashed changes
 
         if (kb.leftArrowKey.isPressed) VX_temp = 1f;
         if (kb.rightArrowKey.isPressed) VX_temp = -1f;
 
+<<<<<<< Updated upstream
+        if ((gp.rightStick.up.isPressed || mouseDelta.y > 0) && transform.rotation.x > -45f)
+=======
         // Mouse rotation logic...
         if ((mouseDelta.y > 0) && transform.rotation.x > -45f)
+>>>>>>> Stashed changes
         {
             rotX -= 0.1f;
             transform.Rotate(rotX * 10.0f, 0, 0);
         }
-        if ((mouseDelta.y < 0) && transform.rotation.x < 30f)
+        if ((gp.rightStick.down.isPressed || mouseDelta.y < 0) && transform.rotation.x < 30f)
         {
             rotX += 0.1f;
             transform.Rotate(rotX * 10.0f, 0, 0);
         }
-        if ((mouseDelta.x < 0))
+        if ((gp.rightStick.left.isPressed || mouseDelta.x < 0))
         {
             rotY -= 0.1f;
             transform.Rotate(0, rotY * 20.0f, 0);
 
         }
-        if (mouseDelta.x > 0)
+        if (gp.rightStick.right.isPressed || mouseDelta.x > 0)
         {
             rotY += 0.1f;
             transform.Rotate(0, rotY * 20.0f, 0);
         }
 
-        if (mouse.leftButton.wasPressedThisFrame && ammo > 0)
+        if (gp.rightShoulder.wasPressedThisFrame || mouse.leftButton.wasPressedThisFrame)
         {
             Instantiate(bullet, ShotSpawn.transform.position, transform.rotation);
-            TakeAmmo(1);
-            game.shoot.Play();
         }
 
-        if (kb.digit1Key.wasPressedThisFrame && FireWallCooldownTimer == 0)
-        {
-            FireWallTimer = 10;
-            FireWallCooldownTimer = 10;
-            FireWallUp = true;
-        }
-        if (kb.digit3Key.wasPressedThisFrame && EncryptorCooldownTimer == 0)
-        {
-            EncryptorUp = true;
-        }
-        if (kb.digit2Key.wasPressedThisFrame && DecoderCooldownTimer == 0)
-        {
-            DecoderUp = true;
-        }
-        if (kb.escapeKey.wasPressedThisFrame)
-        {
-            game.HUD.SetActive(false);
-            game.pause.Play();
-            game.PauseMenu.SetActive(true);
-            Time.timeScale = 0;
-        }
-        if (kb.enterKey.wasPressedThisFrame && game.canEnterDoor)
-        {
-            StartCoroutine(game.DoorTransitionRoutine());
-        }
 
         // --- Calculate Movement Vector (NO MORE DIRECT P ASSIGNMENT) ---
 
@@ -377,7 +287,18 @@ public class Player : MonoBehaviour
             x = Mathf.Clamp(x, PITCH_MIN, PITCH_MAX);
             transform.eulerAngles = new Vector3(x, e.y, 0f);    // keep Z = 0
         }
+<<<<<<< Updated upstream
+        // ------------------------------------------------------------
+
+        transform.position = p;
+
+        MoveForward = MoveRight = MoveLeft = MoveBackward = false;
+        RotateLeft = RotateRight = false;
+        VZ = VX = rotX = rotY = 0;
+
+=======
         // ------------------------------------
+>>>>>>> Stashed changes
 
         // Reset rotation variables here if transform.Rotate accumulates them
         rotX = rotY = 0;
