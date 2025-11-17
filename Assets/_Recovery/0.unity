@@ -724,10 +724,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d929374ec35c34fa53ccd53ea11fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  movementSpeed: 5
   rotX: 0
   rotY: 0
   bullet: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
   ShotSpawn: {fileID: 292655482}
+  HUD: {fileID: 0}
+  Firewall: {fileID: 0}
+  Firewall2: {fileID: 0}
+  FirewallEffect: {fileID: 0}
+  Encryptor: {fileID: 0}
+  Decoder: {fileID: 0}
+  FireWallCooldownText: {fileID: 0}
+  EncryptorCooldownText: {fileID: 0}
+  DecoderCooldownText: {fileID: 0}
+  HPText: {fileID: 0}
+  AmmoCountText: {fileID: 0}
+  HealthBarFill: {fileID: 0}
+  HealthBarForeground: {fileID: 0}
+  AmmoFill: {fileID: 0}
+  AmmoForeground: {fileID: 0}
+  FireWallBox: {fileID: 0}
+  EncryptorBox: {fileID: 0}
+  DecoderBox: {fileID: 0}
+  Fire: {fileID: 0}
+  FireWallCooldownTimer: 0
+  EncryptorCooldownTimer: 0
+  DecoderCooldownTimer: 0
+  FireWallTimer: 0
+  EncryptorTimer: 0
+  DecoderTimer: 0
+  timer1: 0
+  timer2: 0
+  timer3: 0
+  health: 0
+  maxHealth: 0
+  ammo: 0
+  maxAmmo: 0
+  FireWallUp: 0
+  EncryptorUp: 0
+  DecoderUp: 0
+  specialBlue: {r: 7, g: 157, b: 242, a: 255}
+  game: {fileID: 0}
 --- !u!54 &756117556
 Rigidbody:
   m_ObjectHideFlags: 0
