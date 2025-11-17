@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     void Start()
     {
 <<<<<<< Updated upstream
-        
+
 =======
         // *** NEW: Get the CharacterController component ***
         characterController = GetComponent<CharacterController>();
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     void Update()
     {
 <<<<<<< Updated upstream
-      
+
 =======
         UpdateHealth((float)health / (float)maxHealth);
         UpdateAmmo((float)ammo / (float)maxAmmo);
