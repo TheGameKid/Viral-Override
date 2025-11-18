@@ -7,6 +7,14 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+    // --- NEW FIELDS FOR CHARACTER CONTROLLER ---
+    private CharacterController _controller;
+    private Vector3 _velocity; // Stores vertical velocity (gravity/jump)
+    // Exposed speed and gravity for tuning in the Inspector
+    [SerializeField] private float moveSpeed = 5.0f;
+    [SerializeField] private float gravity = -20f;
+    // -------------------------------------------
+
     float VZ = 0f, VX = 0f;
     public float rotX, rotY;
     public GameObject bullet;
@@ -50,9 +58,16 @@ public class Player : MonoBehaviour
     public Game game;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        // --- CHARACTER CONTROLLER INITIALIZATION ---
+        _controller = GetComponent<CharacterController>();
+        if (_controller == null)
+        {
+            Debug.LogError("Player script requires a CharacterController component.");
+        }
+        // -------------------------------------------
+
         health = 100;
         maxHealth = 100;
         ammo = 30;
@@ -74,6 +89,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // ... (Your Update logic remains here) ...
         UpdateHealth((float)health / (float)maxHealth);
         UpdateAmmo((float)ammo / (float)maxAmmo);
 
@@ -98,7 +114,7 @@ public class Player : MonoBehaviour
                 {
                     timer1 = 0;
                     FireWallCooldownTimer -= 1;
-                    
+
                 }
 
                 if (FireWallCooldownTimer != 0)
@@ -111,14 +127,12 @@ public class Player : MonoBehaviour
                     FireWallCooldownText.text = "";
                     FireWallBox.color = Color.red;
                     Fire.SetActive(true);
-                    
+
                     FireWallUp = false;
                 }
-
             }
-            
-        }
 
+        }
     }
 
     public void TakeDamage(int damage)
@@ -165,13 +179,29 @@ public class Player : MonoBehaviour
         AmmoCountText.text = "AMMO: " + ammo + "/" + maxAmmo;
     }
 
-
+    // --- FixedUpdate for Physics and Gravity ---
     private void FixedUpdate()
     {
         if (health > 0)
         {
             CubeTranslation();
         }
+
+        // 1. Gravity and Grounding (Prevents Bouncing on floor/walls)
+        if (_controller.isGrounded)
+        {
+            // Crucial: Set a small negative value to keep the player firmly grounded
+            // and prevent vertical jitters/bounces from unstable physics.
+            _velocity.y = -2f;
+        }
+        else
+        {
+            // Apply gravity over time
+            _velocity.y += gravity * Time.deltaTime;
+        }
+
+        // 2. Apply vertical movement (gravity)
+        _controller.Move(_velocity * Time.deltaTime);
     }
 
     public void CubeTranslation()
@@ -183,16 +213,16 @@ public class Player : MonoBehaviour
 
         if (kb == null) return;
 
+        // ... (Your Input and Rotation Logic) ...
         if (Gamepad.current != null)
         {
             var gp = Gamepad.current;
-
+            // Gamepad movement and rotation logic...
             if (gp.leftStick.up.isPressed) VZ = 0.1f;
             if (gp.leftStick.down.isPressed) VZ = -0.1f;
-
             if (gp.leftStick.left.isPressed) VX = 0.1f;
             if (gp.leftStick.right.isPressed) VX = -0.1f;
-
+            // ... (rest of gamepad code) ...
             if ((gp.rightStick.up.isPressed) && transform.rotation.x > -45f)
             {
                 rotX -= 0.1f;
@@ -224,10 +254,10 @@ public class Player : MonoBehaviour
 
             if (gp.startButton.wasPressedThisFrame)
             {
-                
+
                 game.HUD.SetActive(false);
                 game.PauseMenu.SetActive(true);
-                
+
                 Time.timeScale = 0;
                 game.pause.Play();
             }
@@ -258,11 +288,10 @@ public class Player : MonoBehaviour
 
         if (kb.upArrowKey.isPressed) VZ = 0.1f;
         if (kb.downArrowKey.isPressed) VZ = -0.1f;
-
         if (kb.leftArrowKey.isPressed) VX = 0.1f;
         if (kb.rightArrowKey.isPressed) VX = -0.1f;
 
-
+        // Mouse rotation logic...
         if ((mouseDelta.y > 0) && transform.rotation.x > -45f)
         {
             rotX -= 0.1f;
@@ -285,13 +314,13 @@ public class Player : MonoBehaviour
             transform.Rotate(0, rotY * 20.0f, 0);
         }
 
+        // Mouse shoot and ability code...
         if (mouse.leftButton.wasPressedThisFrame && ammo > 0)
         {
             Instantiate(bullet, ShotSpawn.transform.position, transform.rotation);
             TakeAmmo(1);
             game.shoot.Play();
         }
-
         if (kb.digit1Key.wasPressedThisFrame && FireWallCooldownTimer == 0)
         {
             FireWallTimer = 10;
@@ -318,40 +347,49 @@ public class Player : MonoBehaviour
             StartCoroutine(game.DoorTransitionRoutine());
         }
 
-        Vector3 p = transform.position;
+        // --- HORIZONTAL MOVEMENT FIX ---
+        // Vector3 p = transform.position; // REMOVED
 
-        // --- NEW: move on ground-plane only (ignore vertical from pitch) ---
+        // Calculate movement direction
         Vector3 forwardOnPlane = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
         Vector3 rightOnPlane = Vector3.ProjectOnPlane(transform.right, Vector3.up).normalized;
-        // -------------------------------------------------------------------
+
+        Vector3 moveDirection = Vector3.zero;
 
         if (VZ != 0)
         {
-            // p += VZ * transform.forward;           // (old)
-            p += VZ * forwardOnPlane;                 // (ground-plane)
+            moveDirection += VZ * forwardOnPlane;
         }
         if (VX != 0)
         {
-            // p += VX * -transform.right;            // (old)
-            p += VX * -rightOnPlane;                  // (ground-plane)
+            moveDirection += VX * -rightOnPlane;
         }
 
-        // --- Clamp X rotation and lock Z before updating position ---
+        if (moveDirection.magnitude > 0)
+        {
+            // Use normalized direction to prevent faster diagonal movement
+            Vector3 finalMove = moveDirection.normalized * moveSpeed * Time.deltaTime;
+
+            // Use CharacterController.Move for collision-aware horizontal movement
+            _controller.Move(finalMove);
+        }
+        // ---------------------------------------
+
+
+        // --- Clamp X rotation and lock Z (Prevents Spinning/Tilting) ---
         {
             Vector3 e = transform.eulerAngles;
             float x = (e.x > 180f) ? e.x - 360f : e.x;
             const float PITCH_MIN = -45f;
             const float PITCH_MAX = 30f;
             x = Mathf.Clamp(x, PITCH_MIN, PITCH_MAX);
-            transform.eulerAngles = new Vector3(x, e.y, 0f);   // keep Z = 0
+            // Locking Z to 0 prevents the player from rotating/spinning on the Z axis
+            transform.eulerAngles = new Vector3(x, e.y, 0f);
         }
         // ------------------------------------------------------------
 
-        transform.position = p;
+        // transform.position = p; // REMOVED: This line caused collision issues and bouncing!
 
         VZ = VX = rotX = rotY = 0;
-
-
     }
-
 }
