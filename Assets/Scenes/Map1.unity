@@ -845,7 +845,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1250627218}
   attackRange: 10
   fireRate: 1
@@ -889,7 +889,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 19362480}
   attackRange: 10
   fireRate: 1
@@ -1118,7 +1118,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -4413,7 +4413,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1876028651}
   attackRange: 10
   fireRate: 1
@@ -4457,7 +4457,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5594,7 +5594,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1735972501}
   attackRange: 10
   fireRate: 1
@@ -5638,7 +5638,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -10225,7 +10225,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -10305,7 +10305,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1741042823}
   attackRange: 10
   fireRate: 1
@@ -15341,7 +15341,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 2048484847}
   attackRange: 10
   fireRate: 1
@@ -15385,7 +15385,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -16993,7 +16993,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 52905543}
   attackRange: 10
   fireRate: 1
@@ -17037,7 +17037,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -20453,7 +20453,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1884860122}
   attackRange: 10
   fireRate: 1
@@ -20497,7 +20497,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -23439,7 +23439,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 142584360}
   attackRange: 10
   fireRate: 1
@@ -23483,7 +23483,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -24009,7 +24009,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1002519688}
   attackRange: 10
   fireRate: 1
@@ -24053,7 +24053,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -24293,7 +24293,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 591786184}
   attackRange: 10
   fireRate: 1
@@ -24337,7 +24337,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -25613,7 +25613,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 502010420}
   attackRange: 10
   fireRate: 1
@@ -25657,7 +25657,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -31545,7 +31545,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1368298343}
   attackRange: 10
   fireRate: 1
@@ -31589,7 +31589,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -31706,7 +31706,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 903880900}
   attackRange: 10
   fireRate: 1
@@ -31750,7 +31750,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2

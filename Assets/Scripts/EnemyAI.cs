@@ -180,4 +180,12 @@ public class EnemyAI : MonoBehaviour
         Debug.Log(gameObject.name + " destroyed!");
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerBullet"))
+        {
+            TakeDamage(10);
+        }
+    }
 }

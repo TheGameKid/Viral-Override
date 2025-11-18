@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mover : MonoBehaviour
+public class Mover1 : MonoBehaviour
 {
     public float speed = 15;
     public float factor = 1;
@@ -42,7 +42,7 @@ public class Mover : MonoBehaviour
     /// 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
         }
