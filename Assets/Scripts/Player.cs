@@ -451,8 +451,11 @@ public class Player : MonoBehaviour
         // Check if the colliding object has the "EnemyBullet" tag.
         if (other.CompareTag("EnemyBullet"))
         {
-            // Damage value is 10 as per previous discussion
-            TakeDamage(10);
+            if (!FireWallUp)
+            {
+                // Damage value is 10 as per previous discussion
+                TakeDamage(10);
+            }
 
             // Destroy the bullet immediately after it hits the player
             Destroy(other.gameObject);
