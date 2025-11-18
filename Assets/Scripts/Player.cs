@@ -4,10 +4,17 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.SceneManagement; // <--- ADDED THIS
+using UnityEngine.SceneManagement; 
 
 public class Player : MonoBehaviour
 {
+    // --- NEW FIELDS FOR RATE OF FIRE ---
+    [Header("Weapon Settings")]
+    [Tooltip("Shots per second, e.g., 0.1f = 10 shots/sec")]
+    public float fireRate = 0.1f;
+    private float nextFireTime = 0f; // Stores the time when the next shot is allowed
+    // -----------------------------------
+
     // --- NEW FIELDS FOR CHARACTER CONTROLLER ---
     private CharacterController _controller;
     private Vector3 _velocity; // Stores vertical velocity (gravity/jump)
@@ -75,7 +82,7 @@ public class Player : MonoBehaviour
         }
         // -------------------------------------------
 
-        health = 100;
+        health = 100; // Resetting to 100 as per original script structure
         maxHealth = 100;
         ammo = 30;
         maxAmmo = 30;
@@ -98,6 +105,11 @@ public class Player : MonoBehaviour
     {
         // --- NEW: FALL DETECTION ---
         if (transform.position.y < fallHeightLimit)
+        {
+            RestartGame();
+        }
+        // --- NEW: DEATH CHECK ---
+        if (health <= 0)
         {
             RestartGame();
         }
@@ -158,6 +170,23 @@ public class Player : MonoBehaviour
         this.ammo -= ammo;
     }
 
+    // --- NEW SHOOTING LOGIC ---
+    void Shoot()
+    {
+        // Check if enough time has passed since the last shot
+        if (Time.time >= nextFireTime && ammo > 0)
+        {
+            // Set the time for the *next* shot
+            nextFireTime = Time.time + fireRate;
+
+            // Fire the bullet
+            Instantiate(bullet, ShotSpawn.transform.position, transform.rotation);
+            TakeAmmo(1);
+            game.shoot.Play();
+        }
+    }
+    // --------------------------
+
     public void UpdateHealth(float fraction)
     {
         HealthBarFill.fillAmount = fraction;
@@ -204,7 +233,6 @@ public class Player : MonoBehaviour
         if (_controller.isGrounded)
         {
             // Crucial: Set a small negative value to keep the player firmly grounded
-            // and prevent vertical jitters/bounces from unstable physics.
             _velocity.y = -2f;
         }
         else
@@ -258,11 +286,10 @@ public class Player : MonoBehaviour
                 transform.Rotate(0, rotY * 20.0f, 0);
             }
 
-            if (gp.rightShoulder.wasPressedThisFrame && ammo > 0)
+            // GAMEPAD SHOOTING: Calls Shoot() as long as the button is held down
+            if (gp.rightShoulder.isPressed)
             {
-                Instantiate(bullet, ShotSpawn.transform.position, transform.rotation);
-                TakeAmmo(1);
-                game.shoot.Play();
+                Shoot();
             }
 
             if (gp.startButton.wasPressedThisFrame)
@@ -327,13 +354,12 @@ public class Player : MonoBehaviour
             transform.Rotate(0, rotY * 20.0f, 0);
         }
 
-        // Mouse shoot and ability code...
-        if (mouse.leftButton.wasPressedThisFrame && ammo > 0)
+        // MOUSE SHOOTING: Calls Shoot() as long as the button is held down
+        if (mouse.leftButton.isPressed)
         {
-            Instantiate(bullet, ShotSpawn.transform.position, transform.rotation);
-            TakeAmmo(1);
-            game.shoot.Play();
+            Shoot();
         }
+
         if (kb.digit1Key.wasPressedThisFrame && FireWallCooldownTimer == 0)
         {
             FireWallTimer = 10;
@@ -416,6 +442,21 @@ public class Player : MonoBehaviour
 
         // Reload the current scene
         SceneManager.LoadScene(currentSceneIndex);
+    }
+    // ------------------------------------
+
+    // --- ENEMY BULLET HIT DETECTION ---
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the colliding object has the "EnemyBullet" tag.
+        if (other.CompareTag("EnemyBullet"))
+        {
+            // Damage value is 10 as per previous discussion
+            TakeDamage(10);
+
+            // Destroy the bullet immediately after it hits the player
+            Destroy(other.gameObject);
+        }
     }
     // ------------------------------------
 }

@@ -4905,7 +4905,7 @@ PrefabInstance:
       objectReference: {fileID: 1103181977}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: AmmoFill
@@ -4921,7 +4921,7 @@ PrefabInstance:
       objectReference: {fileID: 888689824}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: DecoderBox
@@ -10119,7 +10119,7 @@ GameObject:
   - component: {fileID: 690651750}
   m_Layer: 0
   m_Name: CapsuleAI
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15224,7 +15224,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &937615350
 GameObject:
   m_ObjectHideFlags: 0
