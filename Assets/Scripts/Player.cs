@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement; // <--- ADDED THIS
 
 public class Player : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private float gravity = -20f;
     // -------------------------------------------
+
+    // --- FALL DETECTION FIELD ---
+    [Header("Game Over Settings")]
+    [Tooltip("The Y-coordinate below which the player restarts the game.")]
+    [SerializeField] private float fallHeightLimit = -20f; // Adjust in Inspector
+    // --------------------------
 
     float VZ = 0f, VX = 0f;
     public float rotX, rotY;
@@ -89,7 +96,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ... (Your Update logic remains here) ...
+        // --- NEW: FALL DETECTION ---
+        if (transform.position.y < fallHeightLimit)
+        {
+            RestartGame();
+        }
+        // ---------------------------
+
         UpdateHealth((float)health / (float)maxHealth);
         UpdateAmmo((float)ammo / (float)maxAmmo);
 
@@ -348,8 +361,6 @@ public class Player : MonoBehaviour
         }
 
         // --- HORIZONTAL MOVEMENT FIX ---
-        // Vector3 p = transform.position; // REMOVED
-
         // Calculate movement direction
         Vector3 forwardOnPlane = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
         Vector3 rightOnPlane = Vector3.ProjectOnPlane(transform.right, Vector3.up).normalized;
@@ -388,8 +399,23 @@ public class Player : MonoBehaviour
         }
         // ------------------------------------------------------------
 
-        // transform.position = p; // REMOVED: This line caused collision issues and bouncing!
-
         VZ = VX = rotX = rotY = 0;
     }
+
+    // --- NEW: RESTART GAME FUNCTION ---
+    private void RestartGame()
+    {
+        // Get the index of the currently active scene
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        // Check for Time.timeScale being 0 (paused) and reset it
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
+
+        // Reload the current scene
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+    // ------------------------------------
 }
