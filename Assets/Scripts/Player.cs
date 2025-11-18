@@ -169,6 +169,20 @@ public class Player : MonoBehaviour
     {
         this.ammo -= ammo;
     }
+    public void AddAmmo(int amount)
+    {
+        // Add the amount to the current ammo count
+        ammo += amount;
+
+        // Clamp the ammo to ensure it doesn't exceed maxAmmo
+        if (ammo > maxAmmo)
+        {
+            ammo = maxAmmo;
+        }
+
+        // Optional: Play a sound effect for picking up ammo here
+        // game.pickupSound.Play(); 
+    }
 
     // --- NEW SHOOTING LOGIC ---
     void Shoot()
