@@ -38,11 +38,9 @@ public class Game : MonoBehaviour
     public bool isCenterToLevel3;
     public bool isCenterToLevel4;
 
-    public Image fadeImage;
+    public Image fadeImage;          // Assign the black fullscreen Image here
     public float fadeDuration = 0.5f;
     public bool isTransitioning = false;
-
-    // NOTE: Ensure you have a script named 'Player' with an 'enabled' property
     public Player player;
 
     public GameObject PauseMenu;
@@ -50,7 +48,7 @@ public class Game : MonoBehaviour
 
     public AudioSource pause;
     public AudioSource shoot;
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         Level1.SetActive(true);
@@ -61,11 +59,9 @@ public class Game : MonoBehaviour
         Center2.SetActive(false);
     }
 
+    // Update is called once per frame
     void Update()
     {
-        // --- 1. Door Distance Checks ---
-
-        // Level 1 Door Check
         if (Level1.activeInHierarchy)
         {
             distance = Vector3.Distance(Player.position, Level1Door.position);
@@ -81,30 +77,20 @@ public class Game : MonoBehaviour
             }
             else if (distance > 3)
             {
-                // Only reset if we are not transitioning
-                if (!isTransitioning)
-                {
-                    ResetDoorState(true);
-                    isLevel1ToCenter = false;
-                }
+                DoorNameWindow.SetActive(false);
+                DoorDescriptionWindow.SetActive(false);
+                DoorName.text = "";
+                DoorDescription.text = "";
+                canEnterDoor = false;
+                isLevel1ToCenter = false;
             }
         }
-
-        // Center Room Door Checks
         else if (Center1.activeInHierarchy)
         {
             distance = Vector3.Distance(Player.position, CenterRoomtoLevel1Door.position);
-            distance2 = Vector3.Distance(Player.position, CenterRoomtoFireWallDoor.position);
 
-            bool nearDoor1 = distance <= 3f;
-            bool nearDoor2 = distance2 <= 3f;
 
-            // Default reset for Center Room doors
-            ResetDoorState(true);
-            isCenterToLevel1 = false;
-            isCenterToLevel2 = false;
-
-            if (nearDoor1 && !isTransitioning)
+            if (distance <= 3f && !isTransitioning)
             {
                 DoorNameWindow.SetActive(true);
                 DoorName.text = "First Room";
@@ -113,7 +99,11 @@ public class Game : MonoBehaviour
                 canEnterDoor = true;
                 isCenterToLevel1 = true;
             }
-            else if (nearDoor2 && !isTransitioning)
+
+
+            distance2 = Vector3.Distance(Player.position, CenterRoomtoFireWallDoor.position);
+
+            if (distance2 <= 3f && !isTransitioning)
             {
                 DoorNameWindow.SetActive(true);
                 DoorName.text = "Firewall Room";
@@ -122,16 +112,23 @@ public class Game : MonoBehaviour
                 canEnterDoor = true;
                 isCenterToLevel2 = true;
             }
-            else if (distance2 > 3 && distance > 3)
+
+            if (distance2 > 3 && distance > 3)
             {
-                // UI already reset by ResetDoorState(true) above
+                DoorNameWindow.SetActive(false);
+                DoorDescriptionWindow.SetActive(false);
+                DoorName.text = "";
+                DoorDescription.text = "";
+                canEnterDoor = false;
+                isCenterToLevel1 = false;
+                isCenterToLevel2 = false;
             }
         }
 
-        // Level 2 Door Check
         else if (Level2.activeInHierarchy)
         {
             distance = Vector3.Distance(Player.position, FireWalltoCenterDoor.position);
+
 
             if (distance <= 3f && !isTransitioning)
             {
@@ -142,78 +139,71 @@ public class Game : MonoBehaviour
                 canEnterDoor = true;
                 isLevel2ToCenter = true;
             }
+
             else if (distance > 3)
             {
-                if (!isTransitioning)
-                {
-                    ResetDoorState(true);
-                    isLevel2ToCenter = false;
-                }
+                DoorNameWindow.SetActive(false);
+                DoorDescriptionWindow.SetActive(false);
+                DoorName.text = "";
+                DoorDescription.text = "";
+                canEnterDoor = false;
+                isLevel2ToCenter = false;
             }
         }
 
-        // --- 2. Input Check to Trigger Transition (The essential fix) ---
-        if (canEnterDoor && !isTransitioning && (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Return)))
-        {
-            StartCoroutine(DoorTransitionRoutine());
-        }
     }
 
     public void Transition()
     {
-        // 1. Level 1 to Center
-        if (isLevel1ToCenter)
+        if (Level1.activeInHierarchy)
         {
             Level1.SetActive(false);
             Center1.SetActive(true);
             Player.position = new Vector3(-218.1322f, Player.position.y, 2.186936f);
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
+            isCenterToLevel1 = false;
         }
-        // 2. Level 2 to Center
-        else if (isLevel2ToCenter)
+        else if (Level2.activeInHierarchy)
         {
             Level2.SetActive(false);
             Center1.SetActive(true);
             Player.position = new Vector3(-204.322f, Player.position.y, -13.74279f);
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
+            isCenterToLevel2 = false;
         }
-        // 3. Center to Level 1
-        else if (isCenterToLevel1)
+
+        else if (Center1.activeInHierarchy && isCenterToLevel1)
         {
             Center1.SetActive(false);
             Level1.SetActive(true);
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
+            isCenterToLevel1 = false;
             Player.position = new Vector3(-225.863f, Player.position.y, 1.521716f);
         }
-        // 4. Center to Level 2
-        else if (isCenterToLevel2)
+
+        else if (Center1.activeInHierarchy && isCenterToLevel2)
         {
             Center1.SetActive(false);
             Level2.SetActive(true);
-            Player.position = new Vector3(-202.3167f, Player.position.y, -19.5631f);
-        }
-
-        // Reset all door state flags after transition is complete
-        ResetDoorState(false);
-    }
-
-    private void ResetDoorState(bool onlyUI = true)
-    {
-        // Always reset UI when called during Update checks
-        DoorNameWindow.SetActive(false);
-        DoorDescriptionWindow.SetActive(false);
-        DoorName.text = "";
-        DoorDescription.text = "";
-        canEnterDoor = false;
-
-        if (!onlyUI)
-        {
-            // Fully reset all specific door flags after a successful transition
-            isLevel1ToCenter = false;
-            isLevel2ToCenter = false;
-            isLevel3ToCenter = false;
-            isLevel4ToCenter = false;
-            isCenterToLevel1 = false;
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
             isCenterToLevel2 = false;
-            isCenterToLevel3 = false;
-            isCenterToLevel4 = false;
+            Player.position = new Vector3(-202.3167f, Player.position.y, -19.5631f);
         }
     }
 
@@ -221,15 +211,13 @@ public class Game : MonoBehaviour
     {
         isTransitioning = true;
         canEnterDoor = false;
-
-        // Temporarily disable player movement script
-        if (player != null)
-        {
-            player.enabled = false;
-        }
-
+        player.enabled = false;
         // Hide door UI immediately
-        ResetDoorState(true);
+        DoorNameWindow.SetActive(false);
+        DoorDescriptionWindow.SetActive(false);
+        DoorName.text = "";
+        DoorDescription.text = "";
+
 
         // 1) Fade OUT to black
         if (fadeImage != null)
@@ -244,17 +232,23 @@ public class Game : MonoBehaviour
                 fadeImage.color = c;
                 yield return null;
             }
+
+            // Ensure fully black
             c.a = 1f;
             fadeImage.color = c;
         }
         else
         {
+            // If no fadeImage assigned, just wait a bit
             yield return new WaitForSeconds(fadeDuration);
         }
 
-        // 2) Perform the Scene/Level Change and Player Repositioning
         Transition();
 
+
+        // (If you later add more doors/levels, you can extend this logic.)
+
+        // Small pause if you want, otherwise remove this line
         yield return new WaitForSeconds(0.1f);
 
         // 3) Fade IN from black
@@ -270,6 +264,8 @@ public class Game : MonoBehaviour
                 fadeImage.color = c;
                 yield return null;
             }
+
+            // Ensure fully transparent again
             c.a = 0f;
             fadeImage.color = c;
         }
@@ -277,12 +273,7 @@ public class Game : MonoBehaviour
         {
             yield return new WaitForSeconds(fadeDuration);
         }
-
-        // Re-enable player movement and set transition complete
-        if (player != null)
-        {
-            player.enabled = true;
-        }
+        player.enabled = true;
         isTransitioning = false;
     }
 
