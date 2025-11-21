@@ -792,6 +792,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 972594916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &57685828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57685829}
+  m_Layer: 0
+  m_Name: Ammo3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57685829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57685828}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1682538065}
+  - {fileID: 665408016}
+  - {fileID: 2075356004}
+  - {fileID: 859702178}
+  - {fileID: 1660580039}
+  m_Father: {fileID: 1915758162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &62356285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,7 +4675,11 @@ PrefabInstance:
       objectReference: {fileID: 1103181977}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: health
-      value: 10
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
+      propertyPath: maxAmmo
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: AmmoFill
@@ -4650,12 +4690,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 189104847}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
+      propertyPath: fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: Firewall2
       value: 
       objectReference: {fileID: 888689824}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6828848212973468226, guid: 4cd69b5b2068b5c4cb872c69b9436cf8, type: 3}
       propertyPath: DecoderBox
@@ -9882,12 +9926,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665408015}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.96, y: 0.65, z: -77.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.945618, y: -0.35000002, z: -47.294395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840689113}
+  m_Father: {fileID: 57685829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &665408017
 MonoBehaviour:
@@ -9901,7 +9945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e102be7f4c349b499c5078d1a622535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
-  ammoRefillAmount: 10
+  ammoRefillAmount: 15
 --- !u!135 &665408018
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9948,7 +9992,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10697,7 +10741,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10822,7 +10866,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15000,12 +15044,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859702177}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.12, y: 0.65, z: -113.43}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.7856293, y: -0.35000002, z: -83.5244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840689113}
+  m_Father: {fileID: 57685829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &859702179
 MonoBehaviour:
@@ -15019,7 +15063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e102be7f4c349b499c5078d1a622535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
-  ammoRefillAmount: 10
+  ammoRefillAmount: 15
 --- !u!135 &859702180
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15066,7 +15110,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22101,6 +22145,7 @@ Transform:
   - {fileID: 515504310}
   - {fileID: 1948578959}
   - {fileID: 908814242}
+  - {fileID: 1451858007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1325549966
@@ -22915,12 +22960,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412022061}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.45, y: 0.65, z: -39.45}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.292496, y: 0.67, z: -112.576904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840689113}
+  m_Father: {fileID: 1451858007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1412022063
 MonoBehaviour:
@@ -22934,7 +22979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e102be7f4c349b499c5078d1a622535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
-  ammoRefillAmount: 10
+  ammoRefillAmount: 20
 --- !u!135 &1412022064
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22981,7 +23026,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23206,12 +23251,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426349663}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.37, y: 0.65, z: -54.64}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.212494, y: 0.55, z: -127.7669}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840689113}
+  m_Father: {fileID: 1451858007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1426349665
 MonoBehaviour:
@@ -23225,7 +23270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e102be7f4c349b499c5078d1a622535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
-  ammoRefillAmount: 10
+  ammoRefillAmount: 20
 --- !u!135 &1426349666
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23272,7 +23317,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23642,6 +23687,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442198292}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1451858006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1451858007}
+  m_Layer: 0
+  m_Name: Ammo2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1451858007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451858006}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 108.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1967464555}
+  - {fileID: 1412022062}
+  - {fileID: 1426349664}
+  m_Father: {fileID: 1309726855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1458442759
 GameObject:
   m_ObjectHideFlags: 0
@@ -25200,12 +25279,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660580038}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.53, y: 0.65, z: -105.97}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 37.435623, y: -0.35000002, z: -76.0644}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840689113}
+  m_Father: {fileID: 57685829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1660580040
 MonoBehaviour:
@@ -25219,7 +25298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e102be7f4c349b499c5078d1a622535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
-  ammoRefillAmount: 10
+  ammoRefillAmount: 15
 --- !u!135 &1660580041
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25266,7 +25345,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25578,12 +25657,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682538064}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.84, y: 0.65, z: -70.23}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 36.74562, y: -0.35000002, z: -40.3244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840689113}
+  m_Father: {fileID: 57685829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1682538066
 MonoBehaviour:
@@ -25597,7 +25676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e102be7f4c349b499c5078d1a622535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
-  ammoRefillAmount: 10
+  ammoRefillAmount: 15
 --- !u!135 &1682538067
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25644,7 +25723,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28093,14 +28172,6 @@ Transform:
   - {fileID: 694286972}
   - {fileID: 1972000179}
   - {fileID: 691692330}
-  - {fileID: 1426349664}
-  - {fileID: 1682538065}
-  - {fileID: 665408016}
-  - {fileID: 2075356004}
-  - {fileID: 1660580039}
-  - {fileID: 859702178}
-  - {fileID: 1967464555}
-  - {fileID: 1412022062}
   m_Father: {fileID: 883969608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841862274
@@ -28964,6 +29035,7 @@ Transform:
   - {fileID: 766592490}
   - {fileID: 1023189134}
   - {fileID: 421511438}
+  - {fileID: 57685829}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1948578958
@@ -29056,12 +29128,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967464554}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.37, y: 0.65, z: -23.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.212494, y: 1.21, z: -97.0269}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840689113}
+  m_Father: {fileID: 1451858007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1967464556
 MonoBehaviour:
@@ -29075,7 +29147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e102be7f4c349b499c5078d1a622535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
-  ammoRefillAmount: 10
+  ammoRefillAmount: 20
 --- !u!135 &1967464557
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29122,7 +29194,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29412,7 +29484,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32834,12 +32906,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075356003}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.84, y: 0.65, z: -94.43}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.74562, y: -0.35000002, z: -64.5244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1840689113}
+  m_Father: {fileID: 57685829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2075356005
 MonoBehaviour:
@@ -32853,7 +32925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e102be7f4c349b499c5078d1a622535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
-  ammoRefillAmount: 10
+  ammoRefillAmount: 15
 --- !u!135 &2075356006
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32900,7 +32972,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
