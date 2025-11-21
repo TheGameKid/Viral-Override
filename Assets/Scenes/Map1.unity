@@ -203,7 +203,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 2141760906}
   attackRange: 10
   fireRate: 1
@@ -1235,7 +1235,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 337183225}
   attackRange: 10
   fireRate: 1
@@ -4085,7 +4085,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 20815733}
   attackRange: 10
   fireRate: 1
@@ -5903,7 +5903,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1119027852}
   attackRange: 10
   fireRate: 1
@@ -8669,7 +8669,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 2067448543}
   attackRange: 10
   fireRate: 1
@@ -8919,7 +8919,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1008005934}
   attackRange: 10
   fireRate: 1
@@ -9209,7 +9209,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 180573363}
   attackRange: 10
   fireRate: 1
@@ -13709,7 +13709,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 724668769}
   attackRange: 10
   fireRate: 1
@@ -15154,7 +15154,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1384823303}
   attackRange: 10
   fireRate: 1
@@ -15346,7 +15346,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1656674398}
   attackRange: 10
   fireRate: 1
@@ -15629,7 +15629,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1152638909}
   attackRange: 10
   fireRate: 1
@@ -20898,7 +20898,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 801378237}
   attackRange: 10
   fireRate: 1
@@ -21392,7 +21392,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 812595}
   attackRange: 10
   fireRate: 1
@@ -21610,7 +21610,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1967675114}
   attackRange: 10
   fireRate: 1
@@ -21884,7 +21884,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1325549967}
   attackRange: 10
   fireRate: 1
@@ -22753,7 +22753,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 762911331}
   attackRange: 10
   fireRate: 1
@@ -23070,7 +23070,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 198733734}
   attackRange: 10
   fireRate: 1
@@ -23539,7 +23539,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1821665665}
   attackRange: 10
   fireRate: 1
@@ -24037,7 +24037,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 776570351}
   attackRange: 10
   fireRate: 1
@@ -24663,7 +24663,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 2001878449}
   attackRange: 10
   fireRate: 1
@@ -27265,7 +27265,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 2030444390}
   attackRange: 10
   fireRate: 1
@@ -28649,7 +28649,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 640960030}
   attackRange: 10
   fireRate: 1
@@ -31007,7 +31007,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1522191635}
   attackRange: 10
   fireRate: 1
@@ -32734,7 +32734,7 @@ MonoBehaviour:
   currentHealth: 50
   moveSpeed: 2
   waitTime: 2
-  bulletPrefab: {fileID: 9211218447052000185, guid: 48eae53fc1f3f9a4e8c2467d50ee4e4b, type: 3}
+  bulletPrefab: {fileID: 9211218447052000185, guid: 5c7d9433874b93c4cb16a41e4f1e20fe, type: 3}
   shotSpawn: {fileID: 1123294436}
   attackRange: 10
   fireRate: 1
