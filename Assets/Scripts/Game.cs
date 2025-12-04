@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Game : MonoBehaviour
 {
@@ -263,6 +264,12 @@ public class Game : MonoBehaviour
 
     public void Transition()
     {
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject a in bullets)
+        {
+            Destroy(a);
+        }
+
         if (Level1.activeInHierarchy)
         {
             Level1.SetActive(false);
@@ -280,7 +287,7 @@ public class Game : MonoBehaviour
             Level2.SetActive(false);
             Center1.SetActive(true);
             pauser = 100;
-            GameObject[] lasers = GameObject.FindGameObjectsWithTag("Lasers");
+            GameObject[] lasers = GameObject.FindGameObjectsWithTag("Laser");
             foreach (GameObject a in lasers)
             {
                 Destroy(a);
