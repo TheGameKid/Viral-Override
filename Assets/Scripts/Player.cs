@@ -577,7 +577,7 @@ public class Player : MonoBehaviour
             if (!FireWallUp)
             {
                 // Damage value is 10 as per previous discussion
-                TakeDamage(0);
+                TakeDamage(10);
             }
 
             // Destroy the bullet immediately after it hits the player
