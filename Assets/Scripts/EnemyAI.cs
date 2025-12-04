@@ -33,11 +33,13 @@ public class EnemyAI : MonoBehaviour
     private float nextFireTime;
     private float gravity = -30f;
     private Vector3 velocity; // For gravity
+    public Player p;
 
     void Awake()
     {
         // Get the CharacterController component
         controller = GetComponent<CharacterController>();
+       // p = GetComponent<Player>();
 
         // Try to automatically find the player if not manually assigned (requires "Player" tag)
         if (player == null)
@@ -95,6 +97,11 @@ public class EnemyAI : MonoBehaviour
 
     private void HandleMovement()
     {
+        if (p.Decoder.activeInHierarchy)
+        {
+            return;
+        }
+        
         // 1. Check if it's time to choose a new direction
         if (Time.time > nextMoveTime)
         {
@@ -145,6 +152,10 @@ public class EnemyAI : MonoBehaviour
     private void HandleShooting()
     {
         // 1. Look at the player
+        if (p.Decoder.activeInHierarchy)
+        {
+            return;
+        }
         Vector3 lookDirection = player.position - transform.position;
         lookDirection.y = 0;
         Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
@@ -185,7 +196,14 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerBullet"))
         {
-            TakeDamage(10);
+            if (!p.EncryptorUp)
+            {
+                TakeDamage(10);
+            }
+            else
+            {
+                TakeDamage(100);
+            }
         }
     }
 }

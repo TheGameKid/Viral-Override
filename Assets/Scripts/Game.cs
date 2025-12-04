@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class Game : MonoBehaviour
 {
@@ -16,7 +17,11 @@ public class Game : MonoBehaviour
     public Transform Level1Door;
     public Transform CenterRoomtoLevel1Door;
     public Transform CenterRoomtoFireWallDoor;
+    public Transform CenterRoomtoEncryptorDoor;
     public Transform FireWalltoCenterDoor;
+    public Transform EncryptortoCenterDoor;
+    public Transform DecodertoCenterDoor;
+    public Transform CenterRoomtoDecoderDoor;
 
     public GameObject DoorNameWindow;
     public TextMeshProUGUI DoorName;
@@ -48,6 +53,20 @@ public class Game : MonoBehaviour
 
     public AudioSource pause;
     public AudioSource shoot;
+
+    public GameObject VirusAttack;
+
+    public Transform[] LaserSpawn = new Transform[7];
+    public int random;
+    public float pauser;
+    public GameObject Laser;
+
+    public GameObject FireWallGotDisplay;
+    public GameObject EncryptorGotDisplay;
+    public GameObject DecoderGotDisplay;
+
+    public EventSystem events;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -113,7 +132,33 @@ public class Game : MonoBehaviour
                 isCenterToLevel2 = true;
             }
 
-            if (distance2 > 3 && distance > 3)
+
+            distance3 = Vector3.Distance(Player.position, CenterRoomtoEncryptorDoor.position);
+
+            if (distance3 <= 3f && !isTransitioning)
+            {
+                DoorNameWindow.SetActive(true);
+                DoorName.text = "Encryptor Room";
+                DoorDescriptionWindow.SetActive(true);
+                DoorDescription.text = "Press X or Enter to go in";
+                canEnterDoor = true;
+                isCenterToLevel3 = true;
+            }
+
+
+            distance4 = Vector3.Distance(Player.position, CenterRoomtoDecoderDoor.position);
+
+            if (distance4 <= 3f && !isTransitioning)
+            {
+                DoorNameWindow.SetActive(true);
+                DoorName.text = "Decoder Room";
+                DoorDescriptionWindow.SetActive(true);
+                DoorDescription.text = "Press X or Enter to go in";
+                canEnterDoor = true;
+                isCenterToLevel4 = true;
+            }
+
+            if (distance4 > 3 && distance > 3 && distance2 > 3 && distance3 > 3)
             {
                 DoorNameWindow.SetActive(false);
                 DoorDescriptionWindow.SetActive(false);
@@ -122,6 +167,8 @@ public class Game : MonoBehaviour
                 canEnterDoor = false;
                 isCenterToLevel1 = false;
                 isCenterToLevel2 = false;
+                isCenterToLevel3 = false;
+                isCenterToLevel4 = false;
             }
         }
 
@@ -149,8 +196,69 @@ public class Game : MonoBehaviour
                 canEnterDoor = false;
                 isLevel2ToCenter = false;
             }
+
+            if (pauser <= 0 && !player.hasEncryptor)
+            {
+                random = Random.Range(0, 7);
+                Instantiate(Laser, LaserSpawn[random].position, LaserSpawn[random].rotation);
+                pauser = 1;
+            }
+            else
+            {
+                pauser -= Time.deltaTime;
+            }
         }
 
+        else if (Level3.activeInHierarchy)
+        {
+            distance = Vector3.Distance(Player.position, EncryptortoCenterDoor.position);
+
+
+            if (distance <= 3f && !isTransitioning)
+            {
+                DoorNameWindow.SetActive(true);
+                DoorName.text = "Center Room";
+                DoorDescriptionWindow.SetActive(true);
+                DoorDescription.text = "Press X or Enter to go in";
+                canEnterDoor = true;
+                isLevel2ToCenter = true;
+            }
+
+            else if (distance > 3)
+            {
+                DoorNameWindow.SetActive(false);
+                DoorDescriptionWindow.SetActive(false);
+                DoorName.text = "";
+                DoorDescription.text = "";
+                canEnterDoor = false;
+                isLevel2ToCenter = false;
+            }
+        }
+        else if (Level4.activeInHierarchy)
+        {
+            distance = Vector3.Distance(Player.position, DecodertoCenterDoor.position);
+
+
+            if (distance <= 3f && !isTransitioning)
+            {
+                DoorNameWindow.SetActive(true);
+                DoorName.text = "Center Room";
+                DoorDescriptionWindow.SetActive(true);
+                DoorDescription.text = "Press X or Enter to go in";
+                canEnterDoor = true;
+                isLevel2ToCenter = true;
+            }
+
+            else if (distance > 3)
+            {
+                DoorNameWindow.SetActive(false);
+                DoorDescriptionWindow.SetActive(false);
+                DoorName.text = "";
+                DoorDescription.text = "";
+                canEnterDoor = false;
+                isLevel2ToCenter = false;
+            }
+        }
     }
 
     public void Transition()
@@ -171,6 +279,12 @@ public class Game : MonoBehaviour
         {
             Level2.SetActive(false);
             Center1.SetActive(true);
+            pauser = 100;
+            GameObject[] lasers = GameObject.FindGameObjectsWithTag("Lasers");
+            foreach (GameObject a in lasers)
+            {
+                Destroy(a);
+            }
             Player.position = new Vector3(-204.322f, Player.position.y, -13.74279f);
             DoorNameWindow.SetActive(false);
             DoorDescriptionWindow.SetActive(false);
@@ -178,6 +292,30 @@ public class Game : MonoBehaviour
             DoorDescription.text = "";
             canEnterDoor = false;
             isCenterToLevel2 = false;
+        }
+        if (Level3.activeInHierarchy)
+        {
+            Level3.SetActive(false);
+            Center1.SetActive(true);
+            Player.position = new Vector3(-203.567f, Player.position.y, 13.70155f);
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
+            isCenterToLevel3 = false;
+        }
+        if (Level4.activeInHierarchy)
+        {
+            Level4.SetActive(false);
+            Center1.SetActive(true);
+            Player.position = new Vector3(-196.898f, Player.position.y, 1.357486f);
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
+            isCenterToLevel4 = false;
         }
 
         else if (Center1.activeInHierarchy && isCenterToLevel1)
@@ -197,6 +335,7 @@ public class Game : MonoBehaviour
         {
             Center1.SetActive(false);
             Level2.SetActive(true);
+            pauser = 1;
             DoorNameWindow.SetActive(false);
             DoorDescriptionWindow.SetActive(false);
             DoorName.text = "";
@@ -204,6 +343,32 @@ public class Game : MonoBehaviour
             canEnterDoor = false;
             isCenterToLevel2 = false;
             Player.position = new Vector3(-202.3167f, Player.position.y, -19.5631f);
+        }
+
+        else if (Center1.activeInHierarchy && isCenterToLevel3)
+        {
+            Center1.SetActive(false);
+            Level3.SetActive(true);
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
+            isCenterToLevel3 = false;
+            Player.position = new Vector3(-203.3167f, Player.position.y, 27.2f);
+        }
+
+        else if (Center1.activeInHierarchy && isCenterToLevel4)
+        {
+            Center1.SetActive(false);
+            Level4.SetActive(true);
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
+            isCenterToLevel4 = false;
+            Player.position = new Vector3(-185.87f, Player.position.y, 1.42f);
         }
     }
 
@@ -280,7 +445,14 @@ public class Game : MonoBehaviour
     public void Resume()
     {
         HUD.SetActive(true);
+        FireWallGotDisplay.SetActive(false);
+        EncryptorGotDisplay.SetActive(false);
+        DecoderGotDisplay.SetActive(false);
         PauseMenu.SetActive(false);
+
         Time.timeScale = 1;
     }
+
+
+
 }

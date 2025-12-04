@@ -7,6 +7,11 @@ TagManager:
   - EnemyBullet
   - PlayerBullet
   - Enemy
+  - Artifact
+  - Laser
+  - FIREWALL
+  - ENCRYPTOR
+  - DECODER
   layers:
   - Default
   - TransparentFX

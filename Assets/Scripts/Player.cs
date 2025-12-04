@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using UnityEditor.PackageManager;
 
 public class Player : MonoBehaviour
 {
@@ -52,6 +53,8 @@ public class Player : MonoBehaviour
     public Image EncryptorBox;
     public Image DecoderBox;
     public GameObject Fire;
+    public GameObject Bolt;
+    public GameObject Freeze;
     public int FireWallCooldownTimer;
     public int EncryptorCooldownTimer;
     public int DecoderCooldownTimer;
@@ -71,9 +74,16 @@ public class Player : MonoBehaviour
     public Color specialBlue = new Color(7, 157, 242, 255);
     public Game game;
 
+    public bool hasFirewall;
+    public bool hasEncryptor;
+    public bool hasDecoder;
+    public GameObject[] FireWallUI = new GameObject[3];
+    public GameObject[] EncryptorUI = new GameObject[3];
+    public GameObject[] DecoderUI = new GameObject[3];
 
     void Awake()
     {
+        //Time.timeScale = 0;
         // --- CHARACTER CONTROLLER INITIALIZATION ---
         _controller = GetComponent<CharacterController>();
         if (_controller == null)
@@ -96,8 +106,8 @@ public class Player : MonoBehaviour
         EncryptorUp = false;
         DecoderUp = false;
         FireWallBox.color = Color.red;
-        DecoderBox.color = Color.green;
-        EncryptorBox.color = specialBlue;
+        DecoderBox.color = specialBlue;
+        EncryptorBox.color = Color.green;
     }
 
     // Update is called once per frame
@@ -157,6 +167,84 @@ public class Player : MonoBehaviour
                 }
             }
 
+        }
+
+        if (EncryptorUp)
+        {
+            if (EncryptorTimer > 0)
+            {
+                EncryptorTimer -= Time.deltaTime;
+                EncryptorBox.color = Color.black;
+            }
+            else
+            {
+                EncryptorTimer = 0;
+                Bolt.SetActive(false);
+                Encryptor.SetActive(false);
+                if (timer2 <= 1)
+                {
+                    timer2 += Time.deltaTime;
+                }
+                else
+                {
+                    timer2 = 0;
+                    EncryptorCooldownTimer -= 1;
+
+                }
+
+                if (EncryptorCooldownTimer != 0)
+                {
+                    EncryptorCooldownText.text = EncryptorCooldownTimer.ToString();
+                }
+                else
+                {
+                    EncryptorCooldownTimer = 0;
+                    EncryptorCooldownText.text = "";
+                    EncryptorBox.color = Color.green;
+                    Bolt.SetActive(true);
+
+                    EncryptorUp = false;
+                }
+            }
+        }
+
+        if (DecoderUp)
+        {
+            if (DecoderTimer > 0)
+            {
+                DecoderTimer -= Time.deltaTime;
+                DecoderBox.color = Color.black;
+            }
+            else
+            {
+                DecoderTimer = 0;
+                Freeze.SetActive(false);
+                Decoder.SetActive(false);
+                if (timer2 <= 1)
+                {
+                    timer2 += Time.deltaTime;
+                }
+                else
+                {
+                    timer2 = 0;
+                    DecoderCooldownTimer -= 1;
+
+                }
+
+                if (DecoderCooldownTimer != 0)
+                {
+                    DecoderCooldownText.text = DecoderCooldownTimer.ToString();
+                }
+                else
+                {
+                    DecoderCooldownTimer = 0;
+                    DecoderCooldownText.text = "";
+                    DecoderBox.color = specialBlue;
+                    Freeze.SetActive(true);
+
+                    DecoderUp = false;
+                }
+            }
         }
     }
 
@@ -316,7 +404,7 @@ public class Player : MonoBehaviour
                 game.pause.Play();
             }
 
-            if (gp.squareButton.wasPressedThisFrame && FireWallCooldownTimer == 0)
+            if (gp.squareButton.wasPressedThisFrame && hasFirewall && FireWallCooldownTimer == 0)
             {
                 FireWallTimer = 10;
                 FireWallCooldownTimer = 10;
@@ -326,13 +414,21 @@ public class Player : MonoBehaviour
                 FirewallEffect.SetActive(true);
                 FireWallUp = true;
             }
-            if (gp.triangleButton.wasPressedThisFrame && EncryptorCooldownTimer == 0)
+            if (gp.triangleButton.wasPressedThisFrame && hasEncryptor && EncryptorCooldownTimer == 0)
             {
-                DecoderUp = true;
-            }
-            if (gp.circleButton.wasPressedThisFrame && DecoderCooldownTimer == 0)
-            {
+                EncryptorTimer = 5;
+                EncryptorCooldownTimer = 10;
+                Bolt.SetActive(false);
+                Encryptor.SetActive(true);
                 EncryptorUp = true;
+            }
+            if (gp.circleButton.wasPressedThisFrame && hasDecoder && DecoderCooldownTimer == 0)
+            {
+                DecoderTimer = 5;
+                DecoderCooldownTimer = 20;
+                Freeze.SetActive(false);
+                Decoder.SetActive(true);
+                DecoderUp = true;
             }
             if (gp.crossButton.wasPressedThisFrame && game.canEnterDoor)
             {
@@ -374,19 +470,32 @@ public class Player : MonoBehaviour
             Shoot();
         }
 
-        if (kb.digit1Key.wasPressedThisFrame && FireWallCooldownTimer == 0)
+        if (kb.digit1Key.wasPressedThisFrame && hasFirewall && FireWallCooldownTimer == 0)
         {
             FireWallTimer = 10;
             FireWallCooldownTimer = 10;
+            Fire.SetActive(false);
+            Firewall.SetActive(true);
+            Firewall2.SetActive(true);
+            FirewallEffect.SetActive(true);
             FireWallUp = true;
         }
-        if (kb.digit3Key.wasPressedThisFrame && EncryptorCooldownTimer == 0)
+        if (kb.digit3Key.wasPressedThisFrame && hasDecoder && DecoderCooldownTimer == 0)
         {
-            EncryptorUp = true;
-        }
-        if (kb.digit2Key.wasPressedThisFrame && DecoderCooldownTimer == 0)
-        {
+            DecoderTimer = 5;
+            DecoderCooldownTimer = 20;
+            Freeze.SetActive(false);
+            Decoder.SetActive(true);
             DecoderUp = true;
+        }
+        if (kb.digit2Key.wasPressedThisFrame && hasEncryptor && EncryptorCooldownTimer == 0)
+        {
+            EncryptorTimer = 5;
+            EncryptorCooldownTimer = 10;
+            Bolt.SetActive(false);
+            Encryptor.SetActive(true);
+            EncryptorUp = true;
+
         }
         if (kb.escapeKey.wasPressedThisFrame)
         {
@@ -468,11 +577,61 @@ public class Player : MonoBehaviour
             if (!FireWallUp)
             {
                 // Damage value is 10 as per previous discussion
-                TakeDamage(10);
+                TakeDamage(0);
             }
 
             // Destroy the bullet immediately after it hits the player
             Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Laser"))
+        {
+            if (!FireWallUp)
+            {
+                TakeDamage(20);
+            }
+
+            // Destroy the bullet immediately after it hits the player
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("FIREWALL"))
+        {
+                hasFirewall = true;
+                foreach (GameObject a in FireWallUI)
+                {
+                    a.SetActive(true);
+                }
+                other.gameObject.SetActive(false);
+            game.FireWallGotDisplay.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        if (other.CompareTag("ENCRYPTOR"))
+        {
+           
+                hasEncryptor = true;
+                foreach (GameObject a in EncryptorUI)
+                {
+                    a.SetActive(true);
+                }
+                other.gameObject.SetActive(false);
+           
+            game.EncryptorGotDisplay.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        if (other.CompareTag("DECODER"))
+        {
+            hasDecoder = true;
+            foreach (GameObject a in DecoderUI)
+            {
+                a.SetActive(true);
+            }
+            other.gameObject.SetActive(false);
+            
+            game.DecoderGotDisplay.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     // ------------------------------------
