@@ -12,6 +12,7 @@ TagManager:
   - FIREWALL
   - ENCRYPTOR
   - DECODER
+  - HealthPickup
   layers:
   - Default
   - TransparentFX
