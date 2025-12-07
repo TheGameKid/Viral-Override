@@ -24,7 +24,7 @@ public class FloatingHeadEnemy : MonoBehaviour
     public float moveChangeTime = 4f;
 
     // --- Private Variables ---
-    private float currentHealth; // Tracks the current health
+    public float currentHealth; // Tracks the current health
     private float nextFireTime;
     private Vector3 startPosition;
     private Vector3 targetPosition;
@@ -34,7 +34,7 @@ public class FloatingHeadEnemy : MonoBehaviour
     void Start()
     {
         // Initialize health when the enemy spawns
-        currentHealth = maxHealth;
+       
 
         startPosition = transform.position;
         nextFireTime = Time.time;
@@ -84,6 +84,7 @@ public class FloatingHeadEnemy : MonoBehaviour
         // Check if health has dropped to zero or below
         if (currentHealth <= 0)
         {
+            game.BossHPText.text = "HP: " + currentHealth + "/" + maxHealth;
             Die();
         }
     }
@@ -108,7 +109,7 @@ public class FloatingHeadEnemy : MonoBehaviour
         // e.g., Play a sound, trigger an explosion particle effect, drop loot.
 
         // Finally, destroy the enemy GameObject
-        Destroy(gameObject);
+        this.gameObject.SetActive(false);
     }
 
     // --- Core Logic Methods (Movement and Shooting) ---

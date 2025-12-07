@@ -4418,6 +4418,7 @@ MonoBehaviour:
   moveSpeed: 20
   patrolRadius: 70
   moveChangeTime: 4
+  currentHealth: 0
   game: {fileID: 1254771168}
 --- !u!65 &237267253
 BoxCollider:
@@ -23694,6 +23695,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d9d66429d76d45e4588709a0f48707ed, type: 2}
+    - target: {fileID: 1526795648048700863, guid: e334dc400902bb14b84c90fbe3afa9ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2679566118293915248, guid: e334dc400902bb14b84c90fbe3afa9ed, type: 3}
       propertyPath: m_Name
       value: StoneHead
@@ -23770,6 +23775,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.744
       objectReference: {fileID: 0}
+    - target: {fileID: 5426657727292421636, guid: e334dc400902bb14b84c90fbe3afa9ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6280449463995795748, guid: e334dc400902bb14b84c90fbe3afa9ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -23781,6 +23790,10 @@ PrefabInstance:
     - target: {fileID: 6280449463995795748, guid: e334dc400902bb14b84c90fbe3afa9ed, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511569002845055931, guid: e334dc400902bb14b84c90fbe3afa9ed, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
