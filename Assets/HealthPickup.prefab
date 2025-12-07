@@ -169,3 +169,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   healthRestoreAmount: 25
+  pickupSound: {fileID: 8300000, guid: 7f4aa26d5b55226409cda231ffaf869b, type: 3}

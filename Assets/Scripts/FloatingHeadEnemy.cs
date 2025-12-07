@@ -23,6 +23,12 @@ public class FloatingHeadEnemy : MonoBehaviour
     public float patrolRadius = 10f;
     public float moveChangeTime = 4f;
 
+    [Header("Audio")] // 🔊 NEW SECTION FOR AUDIO
+    [Tooltip("The continuous sound clip for movement/hovering.")]
+    public AudioClip movementSoundClip;
+    [Tooltip("The AudioSource component used for movement sound.")]
+    public AudioSource movementAudioSource; // Reference to the AudioSource component
+
     // --- Private Variables ---
     public float currentHealth; // Tracks the current health
     private float nextFireTime;
@@ -31,10 +37,11 @@ public class FloatingHeadEnemy : MonoBehaviour
     private float nextMoveChangeTime;
 
     public Game game;
+
     void Start()
     {
-        // Initialize health when the enemy spawns
-       
+        // 💡 NEW: Initialize current health
+        currentHealth = maxHealth;
 
         startPosition = transform.position;
         nextFireTime = Time.time;
@@ -53,6 +60,14 @@ public class FloatingHeadEnemy : MonoBehaviour
                 Debug.LogError("Player not found! Please assign the 'player' transform or tag the player object as 'Player'.");
                 enabled = false;
             }
+        }
+
+        // 💡 NEW: Start playing the movement sound when the enemy activates
+        if (movementAudioSource != null && movementSoundClip != null)
+        {
+            movementAudioSource.clip = movementSoundClip;
+            movementAudioSource.loop = true; // Set to loop since the enemy is always moving/hovering
+            movementAudioSource.Play();
         }
     }
 
@@ -105,17 +120,19 @@ public class FloatingHeadEnemy : MonoBehaviour
     {
         Debug.Log("Floating Head Destroyed!");
 
-        // ** ADD YOUR DEFEAT EFFECTS HERE **
-        // e.g., Play a sound, trigger an explosion particle effect, drop loot.
+        // 💡 NEW: Stop the movement sound when the enemy is defeated
+        if (movementAudioSource != null)
+        {
+            movementAudioSource.Stop();
+        }
 
         // Finally, destroy the enemy GameObject
         this.gameObject.SetActive(false);
+        // Note: You should generally call Destroy(gameObject) instead of SetActive(false)
+        // unless you need the object for post-death effects.
     }
 
     // --- Core Logic Methods (Movement and Shooting) ---
-
-    // ... (All existing movement, rotation, and firing methods go here)
-    // Make sure to include the ChooseNewTargetPosition() and ShootBullet() from the previous working script.
 
     private void RotateToFacePlayer()
     {

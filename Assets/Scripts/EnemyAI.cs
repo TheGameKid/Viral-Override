@@ -26,6 +26,10 @@ public class EnemyAI : MonoBehaviour
     [Tooltip("Time between shots.")]
     [SerializeField] private float fireRate = 1.0f;
 
+    [Header("Audio")] // 🔊 NEW SECTION FOR AUDIO
+    [Tooltip("The sound clip to play when the enemy dies.")]
+    public AudioClip deathSoundClip;
+
     // --- Private Variables ---
     private CharacterController controller;
     private Vector3 moveDirection;
@@ -39,7 +43,7 @@ public class EnemyAI : MonoBehaviour
     {
         // Get the CharacterController component
         controller = GetComponent<CharacterController>();
-       // p = GetComponent<Player>();
+        // p = GetComponent<Player>();
 
         // Try to automatically find the player if not manually assigned (requires "Player" tag)
         if (player == null)
@@ -101,7 +105,7 @@ public class EnemyAI : MonoBehaviour
         {
             return;
         }
-        
+
         // 1. Check if it's time to choose a new direction
         if (Time.time > nextMoveTime)
         {
@@ -170,9 +174,6 @@ public class EnemyAI : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, shotSpawn.position, shotSpawn.rotation);
 
             // NOTE: You need a script on the bullet prefab to handle its forward movement!
-            // Example if bullet has a Rigidbody:
-            // float bulletSpeed = 20f;
-            // bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
         }
     }
 
@@ -187,7 +188,15 @@ public class EnemyAI : MonoBehaviour
 
     private void Die()
     {
-        // Optional: Play explosion effect, drop loot, etc.
+        // 1. Play the Death Sound
+        if (deathSoundClip != null)
+        {
+            // Use PlayClipAtPoint to ensure the sound finishes playing 
+            // even after this enemy GameObject is destroyed.
+            AudioSource.PlayClipAtPoint(deathSoundClip, transform.position);
+        }
+
+        // 2. Destroy the GameObject
         Debug.Log(gameObject.name + " destroyed!");
         Destroy(gameObject);
     }

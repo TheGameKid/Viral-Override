@@ -6,7 +6,9 @@ public class HealthPickup : MonoBehaviour
     [Tooltip("Amount of health to restore to the player.")]
     public int healthRestoreAmount = 25;
 
-    // Optional: Add an effect/sound reference here if needed
+    [Header("Audio Settings")]
+    [Tooltip("The sound clip to play when the item is picked up.")]
+    public AudioClip pickupSound; // Reference to the audio clip file
 
     // This function is called when another object (Collider) enters this object's trigger
     private void OnTriggerEnter(Collider other)
@@ -25,13 +27,17 @@ public class HealthPickup : MonoBehaviour
                 playerScript.health = playerScript.maxHealth;
             }
 
-            // 2. Update the UI immediately (call the public function on the Player script)
-            // Note: You must update the player's UI after changing health
+            // 2. Update the UI immediately
             playerScript.UpdateHealth((float)playerScript.health / (float)playerScript.maxHealth);
 
-            // Optional: Play a pickup sound or show a particle effect here
+            // 3. Play the pickup sound
+            if (pickupSound != null)
+            {
+                // Plays the clip once at the pickup's position.
+                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+            }
 
-            // 3. Destroy the pickup item so it can't be reused
+            // 4. Destroy the pickup item so it can't be reused
             Destroy(gameObject);
         }
     }

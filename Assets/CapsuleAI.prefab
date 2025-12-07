@@ -169,6 +169,7 @@ MonoBehaviour:
   shotSpawn: {fileID: 7825293718968443948}
   attackRange: 12
   fireRate: 2
+  deathSoundClip: {fileID: 8300000, guid: 958408b32ccf3714ea02821877b0870c, type: 3}
   p: {fileID: 0}
 --- !u!64 &-6460828873675903939
 MeshCollider:
