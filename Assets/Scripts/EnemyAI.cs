@@ -202,7 +202,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                TakeDamage(100);
+                TakeDamage(80);
             }
         }
     }
