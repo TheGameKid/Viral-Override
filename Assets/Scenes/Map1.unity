@@ -4418,7 +4418,7 @@ MonoBehaviour:
   moveSpeed: 20
   patrolRadius: 70
   moveChangeTime: 4
-  currentHealth: 0
+  currentHealth: 1000
   game: {fileID: 1254771168}
 --- !u!65 &237267253
 BoxCollider:
