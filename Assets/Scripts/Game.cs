@@ -286,6 +286,8 @@ public class Game : MonoBehaviour
             Destroy(a);
         }
 
+      
+
         if (Level1.activeInHierarchy)
         {
             Level1.SetActive(false);
@@ -405,6 +407,15 @@ public class Game : MonoBehaviour
             canEnterDoor = false;
             isCenterToLevel4 = false;
             Player.position = new Vector3(-203.5f, Player.position.y, 94.866f);
+        }
+
+        if (Center1.activeInHierarchy)
+        {
+            if (player.hasFirewall && player.hasEncryptor && player.hasDecoder)
+            {
+                RedDoor.SetActive(true);
+                Level1.SetActive(false);
+            }
         }
     }
 
