@@ -3,6 +3,9 @@
 public class FloatingHeadEnemy : MonoBehaviour
 {
     // --- Public Variables (Set in Inspector) ---
+    [Header("Health")]
+    public float maxHealth = 1000f; // The total health of the enemy
+
     [Header("Targeting and Firing")]
     public Transform player;
     public GameObject bulletPrefab;
@@ -15,25 +18,26 @@ public class FloatingHeadEnemy : MonoBehaviour
     public float hoverAmplitude = 0.5f;
     public float hoverFrequency = 1f;
 
-    // ** NEW HORIZONTAL MOVEMENT VARIABLES **
     [Header("Horizontal Movement")]
-    public float moveSpeed = 3f; // Speed of horizontal movement
-    public float patrolRadius = 10f; // Max distance from start to patrol
-    public float moveChangeTime = 4f; // How often the head chooses a new destination
+    public float moveSpeed = 3f;
+    public float patrolRadius = 10f;
+    public float moveChangeTime = 4f;
 
     // --- Private Variables ---
+    private float currentHealth; // Tracks the current health
     private float nextFireTime;
     private Vector3 startPosition;
-    private Vector3 targetPosition; // The new horizontal movement target
+    private Vector3 targetPosition;
     private float nextMoveChangeTime;
 
     void Start()
     {
+        // Initialize health when the enemy spawns
+        currentHealth = maxHealth;
+
         startPosition = transform.position;
         nextFireTime = Time.time;
-        nextMoveChangeTime = Time.time; // Initialize move change time
-
-        // Initial setup for the first target position
+        nextMoveChangeTime = Time.time;
         ChooseNewTargetPosition();
 
         if (player == null)
@@ -55,76 +59,94 @@ public class FloatingHeadEnemy : MonoBehaviour
     {
         if (player == null) return;
 
-        // 1. Move Horizontally (X and Z)
+        // Movement and Shooting logic (remains the same)
         ApplyHorizontalMovement();
-
-        // 2. Hover Vertically (Y)
         ApplyHoverMovement();
-
-        // 3. Face the Player (Rotation is now decoupled from movement)
         RotateToFacePlayer();
-
-        // 4. Fire Bullets
         CheckAndFire();
-
-        firePoint.LookAt(player);
     }
 
-    // --- Core Logic Methods ---
+    // --- New Health and Damage Methods ---
+
+    /**
+     * Public method to call when the enemy is hit by a projectile.
+     */
+    public void TakeDamage(float damageAmount)
+    {
+        // Subtract damage from current health
+        currentHealth -= damageAmount;
+
+        Debug.Log($"Head took {damageAmount} damage. Current Health: {currentHealth}");
+
+        // Check if health has dropped to zero or below
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    /**
+     * Handles the enemy's defeat.
+     */
+    private void Die()
+    {
+        Debug.Log("Floating Head Destroyed!");
+
+        // ** ADD YOUR DEFEAT EFFECTS HERE **
+        // e.g., Play a sound, trigger an explosion particle effect, drop loot.
+
+        // Finally, destroy the enemy GameObject
+        Destroy(gameObject);
+    }
+
+    // --- Core Logic Methods (Movement and Shooting) ---
+
+    // ... (All existing movement, rotation, and firing methods go here)
+    // Make sure to include the ChooseNewTargetPosition() and ShootBullet() from the previous working script.
 
     private void RotateToFacePlayer()
     {
-        // Calculate the direction vector from the enemy to the player
         Vector3 direction = player.position - transform.position;
-        direction.y = 0; // Keep the rotation on the horizontal plane
-
-        // Create the target rotation
+        direction.y = 0;
         Quaternion targetRotation = Quaternion.LookRotation(direction);
-
-        // Smoothly rotate towards the target rotation
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
     }
 
     private void ApplyHoverMovement()
     {
-        // Calculate the new Y position using the startPosition (X and Z are handled separately)
         float newY = startPosition.y + Mathf.Sin(Time.time * hoverFrequency) * hoverAmplitude;
-
-        // Only update the Y position here, keeping X and Z as set by HorizontalMovement
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 
-    // ** NEW HORIZONTAL MOVEMENT IMPLEMENTATION **
     private void ApplyHorizontalMovement()
     {
-        // Check if it's time to choose a new target position
         if (Time.time > nextMoveChangeTime || Vector3.Distance(transform.position, targetPosition) < 0.5f)
         {
             ChooseNewTargetPosition();
         }
 
-        // Calculate the direction vector for horizontal movement
         Vector3 moveDirection = (targetPosition - transform.position).normalized;
-
-        // Apply movement only on the X and Z axes
         Vector3 horizontalMove = moveDirection * moveSpeed * Time.deltaTime;
-        horizontalMove.y = 0; // Ensure no vertical movement from this step
-
-        // Apply the horizontal movement
+        horizontalMove.y = 0;
         transform.position += horizontalMove;
     }
 
     private void ChooseNewTargetPosition()
     {
-        // Set the next time to change the movement target
         nextMoveChangeTime = Time.time + moveChangeTime;
 
-        // Calculate a random point within the patrol radius centered around the enemy's start position
-        Vector3 randomDirection = Random.insideUnitSphere * patrolRadius;
-        randomDirection += startPosition;
+        Vector2 randomCircle = Random.insideUnitCircle.normalized * patrolRadius;
 
-        // Ensure the new target position is on the ground plane (only X and Z matter)
-        targetPosition = new Vector3(randomDirection.x, transform.position.y, randomDirection.z);
+        Vector3 currentHorizontalPosition = transform.position;
+        currentHorizontalPosition.y = startPosition.y;
+
+        Vector3 newTarget = currentHorizontalPosition + new Vector3(randomCircle.x, 0, randomCircle.y);
+
+        // Optional: Clamp the new target to prevent endless drifting
+        newTarget.x = Mathf.Clamp(newTarget.x, startPosition.x - patrolRadius, startPosition.x + patrolRadius);
+        newTarget.z = Mathf.Clamp(newTarget.z, startPosition.z - patrolRadius, startPosition.z + patrolRadius);
+
+        targetPosition = newTarget;
     }
 
     private void CheckAndFire()
@@ -138,7 +160,6 @@ public class FloatingHeadEnemy : MonoBehaviour
 
     private void ShootBullet()
     {
-        // Instantiation and launching logic remains the same
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
