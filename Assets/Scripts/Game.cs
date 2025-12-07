@@ -23,6 +23,7 @@ public class Game : MonoBehaviour
     public Transform EncryptortoCenterDoor;
     public Transform DecodertoCenterDoor;
     public Transform CenterRoomtoDecoderDoor;
+    public Transform RedDoortoBossRoom;
 
     public GameObject DoorNameWindow;
     public TextMeshProUGUI DoorName;
@@ -43,6 +44,7 @@ public class Game : MonoBehaviour
     public bool isCenterToLevel2;
     public bool isCenterToLevel3;
     public bool isCenterToLevel4;
+    public bool isCenterToBoss;
 
     public Image fadeImage;          // Assign the black fullscreen Image here
     public float fadeDuration = 0.5f;
@@ -78,6 +80,7 @@ public class Game : MonoBehaviour
         Level3.SetActive(false);
         Level4.SetActive(false);
         Center1.SetActive(false);
+        Center2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -108,18 +111,36 @@ public class Game : MonoBehaviour
         }
         else if (Center1.activeInHierarchy)
         {
-            distance = Vector3.Distance(Player.position, CenterRoomtoLevel1Door.position);
-
-
-            if (distance <= 3f && !isTransitioning)
+            if (!RedDoor.activeInHierarchy)
             {
-                DoorNameWindow.SetActive(true);
-                DoorName.text = "First Room";
-                DoorDescriptionWindow.SetActive(true);
-                DoorDescription.text = "Press X or Enter to go in";
-                canEnterDoor = true;
-                isCenterToLevel1 = true;
+                distance = Vector3.Distance(Player.position, CenterRoomtoLevel1Door.position);
+
+                if (distance <= 3f && !isTransitioning)
+                {
+                    DoorNameWindow.SetActive(true);
+                    DoorName.text = "First Room";
+                    DoorDescriptionWindow.SetActive(true);
+                    DoorDescription.text = "Press X or Enter to go in";
+                    canEnterDoor = true;
+                    isCenterToLevel1 = true;
+                }
             }
+            else
+            {
+                distance = Vector3.Distance(Player.position, RedDoortoBossRoom.position);
+
+                if (distance <= 3f && !isTransitioning)
+                {
+                    DoorNameWindow.SetActive(true);
+                    DoorName.text = "Boss Room";
+                    DoorDescriptionWindow.SetActive(true);
+                    DoorDescription.text = "Press X or Enter to go in";
+                    canEnterDoor = true;
+                    isCenterToBoss = true;
+                }
+            }
+
+           
 
 
             distance2 = Vector3.Distance(Player.position, CenterRoomtoFireWallDoor.position);
@@ -171,6 +192,7 @@ public class Game : MonoBehaviour
                 isCenterToLevel2 = false;
                 isCenterToLevel3 = false;
                 isCenterToLevel4 = false;
+                isCenterToBoss = false;
             }
         }
 
@@ -370,6 +392,19 @@ public class Game : MonoBehaviour
             canEnterDoor = false;
             isCenterToLevel4 = false;
             Player.position = new Vector3(-185.87f, Player.position.y, 1.42f);
+        }
+
+        else if (Center1.activeInHierarchy && isCenterToBoss)
+        {
+            Center1.SetActive(false);
+            Center2.SetActive(true);
+            DoorNameWindow.SetActive(false);
+            DoorDescriptionWindow.SetActive(false);
+            DoorName.text = "";
+            DoorDescription.text = "";
+            canEnterDoor = false;
+            isCenterToLevel4 = false;
+            Player.position = new Vector3(-203.5f, Player.position.y, 94.866f);
         }
     }
 

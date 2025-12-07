@@ -24088,6 +24088,7 @@ MonoBehaviour:
   EncryptortoCenterDoor: {fileID: 269996710}
   DecodertoCenterDoor: {fileID: 748511386}
   CenterRoomtoDecoderDoor: {fileID: 1948578959}
+  RedDoortoBossRoom: {fileID: 649710789}
   DoorNameWindow: {fileID: 650663902}
   DoorName: {fileID: 717716103}
   DoorDescription: {fileID: 1464432305}
@@ -24105,6 +24106,7 @@ MonoBehaviour:
   isCenterToLevel2: 0
   isCenterToLevel3: 0
   isCenterToLevel4: 0
+  isCenterToBoss: 0
   fadeImage: {fileID: 1309291120}
   fadeDuration: 0.5
   isTransitioning: 0
@@ -24129,7 +24131,7 @@ MonoBehaviour:
   EncryptorGotDisplay: {fileID: 906796987}
   DecoderGotDisplay: {fileID: 75964999}
   events: {fileID: 0}
-  RedDoor: {fileID: 0}
+  RedDoor: {fileID: 1391931347}
 --- !u!4 &1254771169
 Transform:
   m_ObjectHideFlags: 0
@@ -25427,6 +25429,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8875449794350432198, guid: b581fdbd127292d44ab21c4b16d91d05, type: 3}
   m_PrefabInstance: {fileID: 781984296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1391931347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8875449794350654438, guid: b581fdbd127292d44ab21c4b16d91d05, type: 3}
+  m_PrefabInstance: {fileID: 649710788}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1400112403
 PrefabInstance:
