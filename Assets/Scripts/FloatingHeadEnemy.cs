@@ -66,6 +66,8 @@ public class FloatingHeadEnemy : MonoBehaviour
 
         // 4. Fire Bullets
         CheckAndFire();
+
+        firePoint.LookAt(player);
     }
 
     // --- Core Logic Methods ---
