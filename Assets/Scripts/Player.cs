@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using UnityEditor.PackageManager;
 
 public class Player : MonoBehaviour
 {

@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Game : MonoBehaviour
 {
