@@ -602,9 +602,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -896,9 +908,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2916,9 +2940,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3141,9 +3177,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3423,9 +3471,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9070,9 +9130,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12254,9 +12326,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15816,9 +15900,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18474,9 +18570,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18648,9 +18756,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20650,9 +20770,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20989,9 +21121,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21059,9 +21203,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21418,9 +21574,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21739,9 +21907,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26583,9 +26763,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27142,9 +27334,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27597,9 +27801,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28058,9 +28274,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28123,9 +28351,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2525711621813327267, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_StepOffset
@@ -28580,9 +28820,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30650,9 +30902,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30861,9 +31125,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32299,9 +32575,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32833,9 +33121,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33424,9 +33724,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1845558822}
     m_Modifications:
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6460828873675903939, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_Name
       value: CapsuleAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 823073351104208983, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4875974407369102998, guid: 0ac97cd666ace91408b8235c6261b02a, type: 3}
       propertyPath: m_LocalPosition.x

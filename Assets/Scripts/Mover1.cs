@@ -46,6 +46,10 @@ public class Mover1 : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        else
+        {
+            return;
+        }
 
     }
 

@@ -205,5 +205,9 @@ public class EnemyAI : MonoBehaviour
                 TakeDamage(80);
             }
         }
+        else
+        {
+            return;
+        }
     }
 }
