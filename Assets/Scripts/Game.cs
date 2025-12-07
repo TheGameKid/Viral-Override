@@ -67,6 +67,8 @@ public class Game : MonoBehaviour
     public GameObject DecoderGotDisplay;
 
     public EventSystem events;
+
+    public GameObject RedDoor;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -198,16 +200,7 @@ public class Game : MonoBehaviour
                 isLevel2ToCenter = false;
             }
 
-            if (pauser <= 0 && !player.hasEncryptor)
-            {
-                random = Random.Range(0, 7);
-                Instantiate(Laser, LaserSpawn[random].position, LaserSpawn[random].rotation);
-                pauser = 1;
-            }
-            else
-            {
-                pauser -= Time.deltaTime;
-            }
+           
         }
 
         else if (Level3.activeInHierarchy)
@@ -260,6 +253,8 @@ public class Game : MonoBehaviour
                 isLevel2ToCenter = false;
             }
         }
+
+
     }
 
     public void Transition()
