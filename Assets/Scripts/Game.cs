@@ -78,7 +78,6 @@ public class Game : MonoBehaviour
         Level3.SetActive(false);
         Level4.SetActive(false);
         Center1.SetActive(false);
-        Center2.SetActive(false);
     }
 
     // Update is called once per frame
