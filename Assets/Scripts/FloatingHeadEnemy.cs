@@ -30,6 +30,7 @@ public class FloatingHeadEnemy : MonoBehaviour
     private Vector3 targetPosition;
     private float nextMoveChangeTime;
 
+    public Game game;
     void Start()
     {
         // Initialize health when the enemy spawns
@@ -64,6 +65,8 @@ public class FloatingHeadEnemy : MonoBehaviour
         ApplyHoverMovement();
         RotateToFacePlayer();
         CheckAndFire();
+
+        game.BossHPText.text = "HP: " + currentHealth + "/" + maxHealth;
     }
 
     // --- New Health and Damage Methods ---
@@ -82,6 +85,15 @@ public class FloatingHeadEnemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PlayerBullet"))
+        {
+            TakeDamage(50);
+            Destroy(other.gameObject);
         }
     }
 

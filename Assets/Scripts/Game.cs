@@ -71,6 +71,9 @@ public class Game : MonoBehaviour
     public EventSystem events;
 
     public GameObject RedDoor;
+    public GameObject BOSS;
+    public GameObject BossHP;
+    public TextMeshProUGUI BossHPText;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -416,6 +419,12 @@ public class Game : MonoBehaviour
                 RedDoor.SetActive(true);
                 Level1.SetActive(false);
             }
+        }
+
+        if (Center2.activeInHierarchy)
+        {
+            BossHP.SetActive(true);
+            BOSS.SetActive(true);
         }
     }
 
